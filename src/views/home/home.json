@@ -1,0 +1,62 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "id": 1,
+      "banner": "http://144.48.240.112:8080/ipfs/QmRdVeZnaTwYUMUL42Tttuc7mby5Cu4eZq8Ti7MF11BYrr?filename=QmRdVeZnaTwYUMUL42Tttuc7mby5Cu4eZq8Ti7MF11BYrr",
+      "product": "2",
+      "title": "Bitcoin Miner S19",
+      "gallery": "http://144.48.240.112:8080/ipfs/QmaeKfAuwEi4Aj7LQBvQiLW7SUgpXZAouvAxKYMmome5Jd?filename=QmaeKfAuwEi4Aj7LQBvQiLW7SUgpXZAouvAxKYMmome5Jd|http://144.48.240.112:8080/ipfs/QmaipwuDwjk5Ap6TPauSfpnVHz4dnZEfe1rvWy4pGLictZ?filename=QmaipwuDwjk5Ap6TPauSfpnVHz4dnZEfe1rvWy4pGLictZ|http://144.48.240.112:8080/ipfs/Qmbej7QnJXm7bKrbXYcik76SDGnnKpYa3bYXjs8Apa4NeG?filename=Qmbej7QnJXm7bKrbXYcik76SDGnnKpYa3bYXjs8Apa4NeG"
+    },
+    {
+      "id": 2,
+      "banner": "http://144.48.240.112:8080/ipfs/QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w?filename=QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w",
+      "product": "2",
+      "title": "Bitcoin Miner T19",
+      "gallery": "http://144.48.240.112:8080/ipfs/QmTaecnyK23i6vHrTRht93NSVPm5s9VqbgFBUXYVRkTEuZ?filename=QmTaecnyK23i6vHrTRht93NSVPm5s9VqbgFBUXYVRkTEuZ|http://144.48.240.112:8080/ipfs/QmbtVe7Fg2NJLhhbeJvUwg22TXTBpTqEjp1fxLmo7gNy8v?filename=QmbtVe7Fg2NJLhhbeJvUwg22TXTBpTqEjp1fxLmo7gNy8v|http://144.48.240.112:8080/ipfs/QmPznGjFTHcwYYt6erqAc2JCGGGiH3JKkWtxfesJBnV5oR?filename=QmPznGjFTHcwYYt6erqAc2JCGGGiH3JKkWtxfesJBnV5oR"
+    },
+    {
+      "id": 3,
+      "banner": "http://144.48.240.112:8080/ipfs/QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w?filename=QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w",
+      "product": "2",
+      "title": "Bitcoin Miner S19 XP",
+      "gallery": "http://144.48.240.112:8080/ipfs/QmQ332V9gmmhRkQJgwDZTLcqwvk7ZygMHbxaBXzMFoofVw?filename=QmQ332V9gmmhRkQJgwDZTLcqwvk7ZygMHbxaBXzMFoofVw|http://144.48.240.112:8080/ipfs/QmUPDGeYNQeqnbLSAzAUvhQ2Uoi5FyDSvkTqbj2UCJ5NWc?filename=QmUPDGeYNQeqnbLSAzAUvhQ2Uoi5FyDSvkTqbj2UCJ5NWc|http://144.48.240.112:8080/ipfs/QmeMT6pLPk7FPKAKz3Y5M5973DvKye67dFcFHapVghbno7?filename=QmeMT6pLPk7FPKAKz3Y5M5973DvKye67dFcFHapVghbno7"
+    },
+    {
+      "id": 4,
+      "banner": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF",
+      "product": "3",
+      "title": "ETH/ETC Miner E9",
+      "gallery": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF|http://144.48.240.112:8080/ipfs/Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs?filename=Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs|http://144.48.240.112:8080/ipfs/QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM?filename=QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM"
+    },
+    {
+      "id": 5,
+      "banner": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF",
+      "product": "3",
+      "title": "ETH/ETC Miner E9",
+      "gallery": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF|http://144.48.240.112:8080/ipfs/Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs?filename=Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs|http://144.48.240.112:8080/ipfs/QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM?filename=QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM"
+    },
+    {
+      "id": 6,
+      "banner": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF",
+      "product": "3",
+      "title": "ETH/ETC Miner E9",
+      "gallery": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF|http://144.48.240.112:8080/ipfs/Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs?filename=Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs|http://144.48.240.112:8080/ipfs/QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM?filename=QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM"
+    },
+    {
+      "id": 7,
+      "banner": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF",
+      "product": "3",
+      "title": "ETH/ETC Miner E9",
+      "gallery": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF|http://144.48.240.112:8080/ipfs/Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs?filename=Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs|http://144.48.240.112:8080/ipfs/QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM?filename=QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM"
+    },
+    {
+      "id": 8,
+      "banner": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF",
+      "product": "3",
+      "title": "ETH/ETC Miner E9",
+      "gallery": "http://144.48.240.112:8080/ipfs/QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF?filename=QmU9UEUNwdLSif7s12sbzJWwsR5XjvAuvUJkK6V6PvrycF|http://144.48.240.112:8080/ipfs/Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs?filename=Qmcdua3Cj1w82yMT9vkSt195iMAydXHQCQ1gXW18LEdnWs|http://144.48.240.112:8080/ipfs/QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM?filename=QmPfRdVtodm6j5ZEPvpmVLQKvdTjD8mjjLRa9FNZcF36CM"
+    }
+  ],
+  "message": "success"
+}

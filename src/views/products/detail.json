@@ -1,0 +1,31 @@
+{
+    "code": 200,
+    "data": [{
+        "id": 3,
+        "product": "3",
+        "brand_name": "awalong",
+        "is_hot": 1,
+        "title": "ETH/ETC Miner E9",
+        "banner": "http://144.48.240.112:8080/ipfs/QmTKWoJCiKuUwmZRLwpRNLrdgx36dSy57712Jpo7MNt14B?filename=QmTKWoJCiKuUwmZRLwpRNLrdgx36dSy57712Jpo7MNt14B",
+        "gallery": "http://144.48.240.112:8080/ipfs/QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w?filename=QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w|http://144.48.240.112:8080/ipfs/QmUhSVoHhnLFZeAzFTj3cgAurzsSZMSNakmnwooezy6dMB?filename=QmUhSVoHhnLFZeAzFTj3cgAurzsSZMSNakmnwooezy6dMB|http://144.48.240.112:8080/ipfs/Qmchn33QK8bEh6ZFLMWfAvAHp8xmJZemdzrZbCohsdAqrL?filename=Qmchn33QK8bEh6ZFLMWfAvAHp8xmJZemdzrZbCohsdAqrL",
+        "version": "",
+        "model_no": "E9",
+        "algorithm": "Ethash | ETH/ETC",
+        "hashrate": "2400M± 10%",
+        "power_watt": "1920W±10%",
+        "power_jth": "0.8J/M±10%",
+        "connection_mode": "RJ45 Ethernet 10/100M ",
+        "miner_size_womm": "520*195.5*290",
+        "miner_size_withmm": "680*316*430",
+        "net_weight": "17.7",
+        "gross_weight": "19.4",
+        "operation_humidity": "10~90%",
+        "operation_altitude": "≤2000",
+        "product_message": "1.If the user fails to use the product in accordance with the given instructions, specifications, and conditions provided, or change the function setting without BITMAIN's prior consent, BITMAIN will not be liable for any damage arising therefrom.\r\n\r\n(1-1) Caution: Wrong input voltage may probably cause miner damaged\r\n\r\n(1-2)  Max condition: temperature 40°C, altitude 0m\r\n\r\n(1-3) Two AC input wires, 10A per wire\r\n\r\n(2-1) Including PSU size\r\n\r\n(2-2) Including PSU weight\r\n(3-1) When the miner is used at an altitude from 900m to 2000m, the highest operating temperature decreases by 1℃ for every increase of 300m",
+        "purchasing_guidelines": "NOTES\r\n\r\n1. One account can purchase a maximum of 50 units. \r\n\r\n2.The down payment is at least 50%, and the rest must be paid in full before September 15, 2022\r\n\r\n3. If the Hashrate of the final delivered mining machine is lower than 2400M, the difference will be refunded according to $/M;\r\n\r\n4. The shipping costs, cutsoms charges, and taxes(if any) are not included in the retail price shown above.\r\n\r\n5. After an order has been submitted, a request to cancel the order, refund any part of the ordered amount or change the ordered item(s) to different item(s) or different batch(es) will not be entertained by BITMAIN.\r\n\r\n6. The pictures shown are for reference only; the final shipment version shall prevail.\r\n\r\n  \r\n\r\nSHIPPING DETAILS\r\n\r\n1. The products are made in China.\r\n\r\n2. Shipments will be scheduled on a first-paid-first-ship basis for orders on which BITMAIN has received full payment.\r\n\r\n3. You are responsible for any customs delays or returned shipments due to a lack of proper documentation. It's highly recommended to be aware of local customs clearance policies and to prepare all customs documentation ahead of time to avoid any customs clearance delays or unexpected costs. \r\n\r\n4. Clicking here to download Certificates of Conformity and find additional information on customs clearance for BITMAIN products.\r\n\r\n \r\n\r\nWARRANTY\r\n\r\n1. A 180-day warranty is provided starting from the shipping date. BITMAIN will cover shipping costs when shipping a replacement unit within the warranty period.\r\n\r\n2. The warranty only applies to the original purchaser who purchased the machine directly from BITMAIN. Once the miner is resold, warranty coverage becomes the responsibility of the re-seller.\r\n\r\n3. If the user fails to use the product per the given instructions, specifications, and conditions provided or changes the function settings of the unit without BITMAIN's prior consent, BITMAIN will not be liable for any damage arising therefrom.\r\n\r\n4. Clicking here for a complete list of the Terms & Conditions that apply to all orders placed on shop.bitmain.com.",
+        "payment": "USDBTCETCUSDT(ERC20/TRC20)",
+        "shipping": "Shipping Date: 15-31,Oct.2022",
+        "cname": "Ethereum Miner Machine"
+    }],
+    "message": "success"
+}

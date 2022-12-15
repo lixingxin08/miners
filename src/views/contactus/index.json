@@ -1,0 +1,15 @@
+{
+    "code": 200,
+    "data": [{
+        "id": 1,
+        "company": "boxtechy",
+        "office_address": "Hong Kong",
+        "work_time": "9:30am-18:30pm",
+        "tel": "+85252617909",
+        "email": "info@boxtechy.com",
+        "whatsapp": "52617909",
+        "wechat": "52617909",
+        "worker": "Mr. Keven"
+    }],
+    "message": "success"
+}

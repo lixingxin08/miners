@@ -1,0 +1,41 @@
+{
+    "code": 200,
+    "data": [{
+        "id": 1,
+        "cname": "Asic Miner Machine"
+    }, {
+        "id": 2,
+        "cname": "BTC Miner Machine"
+    }, {
+        "id": 3,
+        "cname": "Ethereum Miner Machine"
+    }, {
+        "id": 4,
+        "cname": "LTC Miner Machine"
+    }, {
+        "id": 5,
+        "cname": "DCR Coin Miner"
+    }, {
+        "id": 6,
+        "cname": "KDA Coin Miner"
+    }, {
+        "id": 7,
+        "cname": "CKB Coin Miner"
+    }, {
+        "id": 8,
+        "cname": "ZEC Coin Miner"
+    }, {
+        "id": 9,
+        "cname": "Grin Coin Miner"
+    }, {
+        "id": 10,
+        "cname": "Mining Rig Machine"
+    }, {
+        "id": 11,
+        "cname": "Mining Rig Machine Card"
+    }, {
+        "id": 12,
+        "cname": "Asic Miner Parts"
+    }],
+    "message": "success"
+}
