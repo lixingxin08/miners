@@ -14,7 +14,7 @@
       <div class="content">
         <div>
           <div class="home_title">
-            <span class="color1" style="font-size: 36px; font-weight: bold">About Us</span>
+            <span class="color1" style="font-size: 36px; font-weight: bold"></span>
             <!-- <router-link :to="{'name':'aboutus','query':{'usid':0}}">
               <span class="color1 underline" style="font-size: 18px; font-weight: bold; margin-left: 30px">View
                 More</span>
@@ -23,7 +23,12 @@
           </div>
           <div class="flex_b">
             <div class="home_itemimg">
-              <img src="../../img/ss23.jpg" alt="" />
+              <!-- <img src="../../img/ss23.jpg" alt="" /> -->
+              <a class="twitter-timeline"
+                href="https://twitter.com/NHASH_Official?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3ANHASH_Official%7Ctwcon%5Es2"
+                data-tweet-limit="10" data-width="636" data-height="356">
+                Tweets by @TwitterDev
+              </a>
             </div>
             <div class="home1_art">
               <router-link :to="{ 'name': 'aboutus', 'query': { 'usid': 0 } }">
@@ -42,14 +47,19 @@
                 </div>
               </router-link>
               <div class="home1_art_b flex_a">
-                <div class="home1_art_b_item">
+                <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.nhash.net%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5ENHASH_Official&region=follow_link&screen_name=NHASH_Official">
+                  <div class="home1_art_b_item">
+                    <a-icon type="twitter" /> Follow @NHASH_Official
+                  </div>
+                </a>
+                <!-- <div class="home1_art_b_item">
                   <div class="color1" style="font-size: 52px">10000+</div>
                   <div style="font-size: 20px">Customers Served</div>
                 </div>
                 <div class="home1_art_b_item">
                   <div class="color1" style="font-size: 52px">20000+</div>
                   <div style="font-size: 20px">Annual Sales</div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -422,16 +432,16 @@ export default {
       let res = await this.$http.get(this.$api.getNewsAndCasesList)
       if (res.data.code == 200) {
         this.setnewslist(res.data.data)
-        let aa=res.data.data.news
+        let aa = res.data.data.news
         if (!aa) {
-        return
-      }
-      for (let i = 0; i < aa.length; i++) {
-        if (aa[i].is_hot!==0) {
-          this.homenews.push(aa[i])
+          return
         }
-      }
-      console.log(this.homenews,'this.homenews');
+        for (let i = 0; i < aa.length; i++) {
+          if (aa[i].is_hot !== 0) {
+            this.homenews.push(aa[i])
+          }
+        }
+        console.log(this.homenews, 'this.homenews');
       } else {
         this.$message.error(res.message)
       }
@@ -519,6 +529,8 @@ export default {
 .home_itemimg {
   position: relative;
   left: 0;
+  width: 636px;
+  height: 356px;
 }
 
 .home_carousel {
@@ -527,10 +539,6 @@ export default {
   overflow: hidden;
 }
 
-.home_itemimg img {
-  width: 636px;
-  height: 356px;
-}
 
 .home_title {
   height: 63px;
@@ -612,6 +620,19 @@ export default {
 
 .home_3itemimg {
   height: 380px;
+}
+
+.home1_art_b_item {
+  width: 200px;
+  height: 26px;
+  background-color: #ff4500;
+  border-radius: 13px;
+  font-size: 13px;
+  line-height: 26px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .home4 {

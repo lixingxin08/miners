@@ -1,9 +1,9 @@
 <template>
     <a-carousel autoplay :dots=false>
+        <div><img src="../../img/about.jpg" alt="" class="about_img" /></div>
+        <!-- <div><img src="../../img/20220911034249.png" alt="" /></div>
         <div><img src="../../img/20220911034249.png" alt="" /></div>
-        <div><img src="../../img/20220911034249.png" alt="" /></div>
-        <div><img src="../../img/20220911034249.png" alt="" /></div>
-        <div><img src="../../img/20220911034249.png" alt="" /></div>
+        <div><img src="../../img/20220911034249.png" alt="" /></div> -->
     </a-carousel>
 </template>
 <script>
@@ -20,6 +20,10 @@ export default {
 
 .ant-carousel>>>.slick-slide h3 {
     color: #fff;
+}
+.about_img{
+    width: 100%;
+    height: 100%;
 }
 </style>
   
