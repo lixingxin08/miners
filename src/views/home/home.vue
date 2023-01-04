@@ -78,7 +78,7 @@
         <div class="extent_box ab1" :class="scrolltype ? 'isproducts' : ''">
           <div class="flex_b">
             <div class="home_pro_i1 box_shadown rel">
-              <img :src="this.bannerdata[0] | gallery" alt="" class="extent_box toscaleimg ab" />
+              <img :src="this.bannerdata[0].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[0].id } }">
                 <div class="extent_box">
                   <div class="tac home_pro1 font_22">{{ bannerdata[0].title }}</div>
@@ -95,11 +95,11 @@
             </div>
 
             <div class="home_pro_i2 box_shadown rel">
-              <img :src="this.bannerdata[1] | gallery" alt="" class="extent_box toscaleimg ab" />
+              <img :src="this.bannerdata[1].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[1].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">Bitcoin Miner S19 XP Hyd.</div>
-                  <div class="tac home_pro2 font_18">BTC/BCH/BSV</div>
+                  <div class="tac home_pro1 font_22">{{ bannerdata[1].title }}</div>
+                  <div class="tac home_pro2 font_18">{{ bannerdata[1].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[1].hashrate | filnum(bannerdata[1].hashrate) }}</span>|
                     <span>{{ bannerdata[1].power_watt | filnum(bannerdata[1].power_watt) }}</span> |
@@ -114,11 +114,11 @@
           </div>
           <div class="flex_b mt20_mb20">
             <div class="home_pro_i2 box_shadown rel" v-if="this.bannerdata.length >= 3">
-              <img :src="this.bannerdata[2] | gallery" alt="" class="extent_box toscaleimg ab" />
+              <img :src="this.bannerdata[2].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[2].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">Bitcoin Miner S19 XP Hyd.</div>
-                  <div class="tac home_pro2 font_18">BTC/BCH/BSV</div>
+                  <div class="tac home_pro1 font_22">{{ bannerdata[2].title }}</div>
+                  <div class="tac home_pro2 font_18">{{ bannerdata[2].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[2].hashrate | filnum(bannerdata[2].hashrate) }}</span>|
                     <span>{{ bannerdata[2].power_watt | filnum(bannerdata[2].power_watt) }}</span> |
@@ -131,11 +131,11 @@
               </router-link>
             </div>
             <div class="home_pro_i1 box_shadown rel" v-if="this.bannerdata.length >= 4">
-              <img :src="this.bannerdata[3] | gallery" alt="" class="extent_box toscaleimg ab" />
+              <img :src="this.bannerdata[3].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[3].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">Bitcoin Miner S19 XP Hyd.</div>
-                  <div class="tac home_pro2 font_18">BTC/BCH/BSV</div>
+                  <div class="tac home_pro1 font_22">{{ bannerdata[3].title }}</div>
+                  <div class="tac home_pro2 font_18">{{ bannerdata[3].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[3].hashrate | filnum(bannerdata[3].hashrate) }}</span>|
                     <span>{{ bannerdata[3].power_watt | filnum(bannerdata[3].power_watt) }}</span> |
@@ -150,11 +150,11 @@
           </div>
           <div class="flex_b">
             <div class="home_pro_i3 box_shadown rel" v-if="this.bannerdata.length >= 5">
-              <img :src="this.bannerdata[4] | gallery" alt="" class="extent_box toscaleimg ab" />
+              <img :src="this.bannerdata[4].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[4].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">Bitcoin Miner S19 XP Hyd.</div>
-                  <div class="tac home_pro2 font_18">BTC/BCH/BSV</div>
+                  <div class="tac home_pro1 font_22">{{ bannerdata[4].title }}</div>
+                  <div class="tac home_pro2 font_18">{{ bannerdata[4].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[4].hashrate | filnum(bannerdata[4].hashrate) }}</span>|
                     <span>{{ bannerdata[4].power_watt | filnum(bannerdata[4].power_watt) }}</span> |
@@ -167,11 +167,11 @@
               </router-link>
             </div>
             <div class="home_pro_i3 box_shadown rel" v-if="this.bannerdata.length >= 6">
-              <img :src="this.bannerdata[5] | gallery" alt="" class="extent_box toscaleimg ab" />
+              <img :src="this.bannerdata[5].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[5].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">Bitcoin Miner S19 XP Hyd.</div>
-                  <div class="tac home_pro2 font_18">BTC/BCH/BSV</div>
+                  <div class="tac home_pro1 font_22">{{ bannerdata[5].title }}</div>
+                  <div class="tac home_pro2 font_18">{{ bannerdata[5].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[5].hashrate | filnum(bannerdata[5].hashrate) }}</span>|
                     <span>{{ bannerdata[5].power_watt | filnum(bannerdata[5].power_watt) }}</span> |
@@ -183,11 +183,11 @@
               </router-link>
             </div>
             <div class="home_pro_i3 box_shadown rel" v-if="this.bannerdata.length >= 7">
-              <img :src="this.bannerdata[6] | gallery" alt="" class="extent_box toscaleimg ab" />
+              <img :src="this.bannerdata[6].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[6].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">Bitcoin Miner S19 XP Hyd.</div>
-                  <div class="tac home_pro2 font_18">BTC/BCH/BSV</div>
+                  <div class="tac home_pro1 font_22">{{ bannerdata[6].title }}</div>
+                  <div class="tac home_pro2 font_18">{{ bannerdata[6].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[6].hashrate | filnum(bannerdata[6].hashrate) }}</span>|
                     <span>{{ bannerdata[6].power_watt | filnum(bannerdata[6].power_watt) }}</span> |
@@ -200,11 +200,11 @@
             </div>
             <div class="home_pro_i3 box_shadown flex_col_between">
               <div class="home_pro_end rel" v-if="this.bannerdata.length >= 8">
-                <img :src="this.bannerdata[7] | gallery" alt="" class="extent_box toscaleimg ab" />
+                <img :src="this.bannerdata[7].product_img" alt="" class="extent_box toscaleimg ab" />
                 <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[6].id } }">
                   <div class="extent_box">
-                    <div class="tac home_pro1 font_22">Bitcoin Miner S19 XP Hyd.</div>
-                    <div class="tac home_pro2 font_18">BTC/BCH/BSV</div>
+                    <div class="tac home_pro1 font_22">{{ bannerdata[7].title }}</div>
+                    <div class="tac home_pro2 font_18">{{ bannerdata[7].algorithm }}</div>
                     <div class="tac home_pro3 font_18">
                       <span>{{ bannerdata[7].hashrate | filnum(bannerdata[7].hashrate) }}</span>|
                       <span>{{ bannerdata[7].power_watt | filnum(bannerdata[7].power_watt) }}</span> |
@@ -423,6 +423,7 @@ export default {
       let res = await this.$http.get(this.$api.getBanner)
       if (res.data.code == 200) {
         this.bannerdata = res.data.data
+        console.log(this.bannerdata ,'this.bannerdata ');
         this.bannertype = true
       } else {
         this.$message.error(res.message)
