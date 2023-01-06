@@ -1,7 +1,7 @@
 <template>
     <div id="components-modal-demo-position" v-if="visitype">
         <a-modal v-model="visitype" centered :footer="null" :maskClosable="false"
-            :bodyStyle="{ 'background-color': '#fff','width': '716px','height': '520px','padding': 0}"
+            :bodyStyle="{ 'background-color': '#fff', 'width': '716px', 'height': '520px', 'padding': 0 }"
             :closable="false">
 
             <div slot='header' class="model_t flex_b">
@@ -13,13 +13,13 @@
                     </div>
                     <div class="dialog_l_item" style=" font-size: 12px;"></div>
                     <div class="dialog_l_item">title:</div>
-                    <div class="dialog_l_item">{{pro_detail.title}}</div>
+                    <div class="dialog_l_item">{{ pro_detail.title }}</div>
                     <div class="dialog_l_item">Algorithm:</div>
-                    <div class="dialog_l_item">{{pro_detail.algorithm}}</div>
+                    <div class="dialog_l_item">{{ pro_detail.algorithm }}</div>
                     <div class="dialog_l_item">Power Consumption:</div>
-                    <div class="dialog_l_item">{{pro_detail.power_watt}}</div>
+                    <div class="dialog_l_item">{{ pro_detail.power_watt }}</div>
                     <div class="dialog_l_item">Hashrate:</div>
-                    <div class="dialog_l_item"> {{pro_detail.hashrate}}</div>
+                    <div class="dialog_l_item"> {{ pro_detail.hashrate }}</div>
                 </div>
                 <div class="flex_col_start dialog_r">
                     <div class="close flex_b" @click="close()">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="flex_f" style="margin-bottom: 10px;margin-top:20px;width: 100%;">
                         <template>
-                            <a-textarea v-model="formdata.decoration" placeholder="Please enter your inquiry details."
+                            <a-textarea v-model="formdata.description" placeholder="Please enter your inquiry details."
                                 :rows="6">
                             </a-textarea>
                         </template>
@@ -60,6 +60,7 @@
 </template>
 <script>
 import { Mixin1 } from '../../utils/mixins';
+import axios from 'axios'
 export default {
     props: {
         visitype: Boolean,
@@ -76,11 +77,32 @@ export default {
                 country_code: '',
                 phone: '',
                 email: '',
-                decoration: ''
+                description: ''
             }
         };
     },
     methods: {
+        async feedback() {
+            // let res = resdata
+            // this.bannerdata = res.data
+            const formData = new FormData()
+            let _that = this
+            formData.append('country_code', _that.formdata.country_code)
+            formData.append('phone', _that.formdata.phone)
+            formData.append('email', _that.formdata.email)
+            formData.append('description', _that.formdata.description)
+            let res = await axios({
+                url: _that.$api.feedback,
+                method: 'post',
+                data:formData
+                
+            })
+            if (res.data.code == 200) {
+                this.$message.succes(res.data.msg)
+            } else {
+                this.$message.error(res.data.msg)
+            }
+        },
         setdata() {
             if (!this.$utils.verNum(this.formdata.country_code)) {
                 this.$message.warning('Wrong format of country code number')
@@ -94,6 +116,7 @@ export default {
                 this.$message.warning('Wrong format of email')
                 return
             }
+            this.feedback()
         },
         close() {
             this.$emit('toclose', false)
@@ -150,4 +173,3 @@ export default {
     font-weight: 450;
 }
 </style>
-  

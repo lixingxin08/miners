@@ -79,8 +79,9 @@ export default {
   }
 };
 </script>
-
 <style>
+@import './assets/fonts/fonts.css';
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -91,6 +92,8 @@ export default {
   width: 1920px;
   overflow: scroll;
   box-sizing: border-box;
+  font-family: 'MiSans-Normal';
+  font-weight: 400;
 }
 
 #app::-webkit-scrollbar {

@@ -61,16 +61,16 @@
                 </div>
                 <div class="fool_message">Let us know your requirement. We will connect best products with you.</div>
                 <div class="flex_f" style="margin-bottom: 10px;margin-top: 10px">
-                    <a-input ref="userNameInput" v-model="formdata.country_code" placeholder="+CountryCode"
-                        style="width:84px;margin-right: 6px">
-                        <a-icon slot="prefix" type="phone" theme="filled" style="color: #ff4500;" />
+                    <a-input  v-model="formdata.country_code" placeholder="+CountryCode" 
+                        style="width:84px;margin-right: 6px;">
+                        <a-icon slot="prefix" type="phone" theme="filled" style="color: #4361ff;" />
                     </a-input>
-                    <a-input style="flex:1;" v-model="formdata.phone" placeholder="Your Phone" />
+                    <a-input style="flex:1;" v-model="formdata.phone" placeholder="Your Phone" class="f_inp" />
                 </div>
                 <div class="fool_inp">
                     <a-input placeholder="Your E-mail" v-model="formdata.email" />
                 </div>
-                <div class="fool_inp"><template>
+                <div class="fool_inp" ><template>
                         <a-textarea
                             placeholder="Enter product details (such as color,size,materials etc.) and other specific requirements to receive an accurate quote.*"
                             :rows="4" v-model="formdata.description" />
@@ -87,6 +87,7 @@
 </template>
 <script>
     import { mapState } from 'vuex'
+    import axios from 'axios'
 export default {
     data() {
         return {
@@ -119,11 +120,24 @@ export default {
             }
         },
         async feedback() {
-            let res = await this.$http.post(this.$api.feedback, this.formdata)
+            // let res = resdata
+            // this.bannerdata = res.data
+            const formData = new FormData()
+            let _that = this
+            formData.append('country_code', _that.formdata.country_code)
+            formData.append('phone', _that.formdata.phone)
+            formData.append('email', _that.formdata.email)
+            formData.append('description', _that.formdata.description)
+            let res = await axios({
+                url: _that.$api.feedback,
+                method: 'post',
+                data:formData
+                
+            })
             if (res.data.code == 200) {
-                this.$message.succes(res.message)
+                this.$message.succes(res.data.msg)
             } else {
-                this.$message.error(res.message)
+                this.$message.error(res.data.msg)
             }
         },
         setdata() {
@@ -148,8 +162,9 @@ export default {
 .fool {
     width: 100%;
     height: 400px;
-    background-color: #000;
+    background-image: linear-gradient(to right ,#131838,#1E2C59,#2D5382,#367898);
     color: #fff;
+   
 }
 
 .fool_main {
@@ -197,5 +212,6 @@ export default {
 .fool_inp {
     margin-top: 6px;
     padding: 0;
+    
 }
 </style>

@@ -14,7 +14,7 @@
       <div class="content">
         <div>
           <div class="home_title">
-            <span class="color1" style="font-size: 36px; font-weight: bold"></span>
+            <span class="color2" style="font-size: 36px; font-weight: bold">Marine King Miner</span>
             <!-- <router-link :to="{'name':'aboutus','query':{'usid':0}}">
               <span class="color1 underline" style="font-size: 18px; font-weight: bold; margin-left: 30px">View
                 More</span>
@@ -24,18 +24,19 @@
           <div class="flex_b">
             <div class="home_itemimg">
               <!-- <img src="../../img/ss23.jpg" alt="" /> -->
-              <a class="twitter-timeline"
+              <div style="width:636px;height:356px"> <a class="twitter-timeline"
                 href="https://twitter.com/NHASH_Official?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3ANHASH_Official%7Ctwcon%5Es2"
                 data-tweet-limit="10" data-width="636" data-height="356">
                 Tweets by @TwitterDev
-              </a>
+              </a></div>
+             
             </div>
             <div class="home1_art">
-              <router-link :to="{ 'name': 'aboutus', 'query': { 'usid': 0 } }">
+              <!-- <router-link :to="{ 'name': 'aboutus', 'query': { 'usid': 0 } }">
                 <div class="home1_art_t">Marine King Miner</div>
-              </router-link>
+              </router-link> -->
               <router-link :to="{ 'name': 'aboutus', 'query': { 'usid': 0 } }">
-                <div ref="test" @click="toeli()" class="iscursor col_0">
+                <div ref="test" @click="toeli()" class="iscursor col_0 home1_art_main">
                   Headquartered in Chengdu, Marine King Miner is one of the top
                   three asic miner suppliers in China.As an experienced supplier
                   in this line, Marine King Miner has close business relationship
@@ -47,11 +48,11 @@
                 </div>
               </router-link>
               <div class="home1_art_b flex_a">
-                <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.nhash.net%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5ENHASH_Official&region=follow_link&screen_name=NHASH_Official">
+                <!-- <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.nhash.net%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5ENHASH_Official&region=follow_link&screen_name=NHASH_Official">
                   <div class="home1_art_b_item">
                     <a-icon type="twitter" /> Follow @NHASH_Official
                   </div>
-                </a>
+                </a> -->
                 <!-- <div class="home1_art_b_item">
                   <div class="color1" style="font-size: 52px">10000+</div>
                   <div style="font-size: 20px">Customers Served</div>
@@ -81,7 +82,7 @@
               <img :src="this.bannerdata[0].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[0].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">{{ bannerdata[0].title }}</div>
+                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[0].title }}</div>
                   <div class="tac home_pro2 font_18">{{ bannerdata[0].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[0].hashrate | filnum(bannerdata[0].hashrate) }}</span>|
@@ -89,7 +90,7 @@
                     <span>{{ bannerdata[0].power_jth | filnum(bannerdata[0].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
-                  </div>
+                  </div> -->
                 </div>
               </router-link>
             </div>
@@ -98,7 +99,7 @@
               <img :src="this.bannerdata[1].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[1].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">{{ bannerdata[1].title }}</div>
+                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[1].title }}</div>
                   <div class="tac home_pro2 font_18">{{ bannerdata[1].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[1].hashrate | filnum(bannerdata[1].hashrate) }}</span>|
@@ -107,7 +108,7 @@
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
 
-                  </div>
+                  </div> -->
                 </div>
               </router-link>
             </div>
@@ -117,7 +118,7 @@
               <img :src="this.bannerdata[2].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[2].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">{{ bannerdata[2].title }}</div>
+                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[2].title }}</div>
                   <div class="tac home_pro2 font_18">{{ bannerdata[2].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[2].hashrate | filnum(bannerdata[2].hashrate) }}</span>|
@@ -126,7 +127,7 @@
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
 
-                  </div>
+                  </div> -->
                 </div>
               </router-link>
             </div>
@@ -134,7 +135,7 @@
               <img :src="this.bannerdata[3].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[3].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">{{ bannerdata[3].title }}</div>
+                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[3].title }}</div>
                   <div class="tac home_pro2 font_18">{{ bannerdata[3].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[3].hashrate | filnum(bannerdata[3].hashrate) }}</span>|
@@ -143,7 +144,7 @@
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
 
-                  </div>
+                  </div> -->
                 </div>
               </router-link>
             </div>
@@ -153,7 +154,7 @@
               <img :src="this.bannerdata[4].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[4].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">{{ bannerdata[4].title }}</div>
+                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[4].title }}</div>
                   <div class="tac home_pro2 font_18">{{ bannerdata[4].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[4].hashrate | filnum(bannerdata[4].hashrate) }}</span>|
@@ -162,7 +163,7 @@
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
 
-                  </div>
+                  </div> -->
                 </div>
               </router-link>
             </div>
@@ -170,7 +171,7 @@
               <img :src="this.bannerdata[5].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[5].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">{{ bannerdata[5].title }}</div>
+                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[5].title }}</div>
                   <div class="tac home_pro2 font_18">{{ bannerdata[5].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[5].hashrate | filnum(bannerdata[5].hashrate) }}</span>|
@@ -178,7 +179,7 @@
                     <span>{{ bannerdata[5].power_jth | filnum(bannerdata[5].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
-                  </div>
+                  </div> -->
                 </div>
               </router-link>
             </div>
@@ -186,7 +187,7 @@
               <img :src="this.bannerdata[6].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[6].id } }">
                 <div class="extent_box">
-                  <div class="tac home_pro1 font_22">{{ bannerdata[6].title }}</div>
+                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[6].title }}</div>
                   <div class="tac home_pro2 font_18">{{ bannerdata[6].algorithm }}</div>
                   <div class="tac home_pro3 font_18">
                     <span>{{ bannerdata[6].hashrate | filnum(bannerdata[6].hashrate) }}</span>|
@@ -194,7 +195,7 @@
                     <span>{{ bannerdata[6].power_jth | filnum(bannerdata[6].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
-                  </div>
+                  </div> -->
                 </div>
               </router-link>
             </div>
@@ -203,7 +204,7 @@
                 <img :src="this.bannerdata[7].product_img" alt="" class="extent_box toscaleimg ab" />
                 <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[6].id } }">
                   <div class="extent_box">
-                    <div class="tac home_pro1 font_22">{{ bannerdata[7].title }}</div>
+                    <!-- <div class="tac home_pro1 font_22">{{ bannerdata[7].title }}</div>
                     <div class="tac home_pro2 font_18">{{ bannerdata[7].algorithm }}</div>
                     <div class="tac home_pro3 font_18">
                       <span>{{ bannerdata[7].hashrate | filnum(bannerdata[7].hashrate) }}</span>|
@@ -211,7 +212,7 @@
                       <span>{{ bannerdata[7].power_jth | filnum(bannerdata[7].power_jth) }}</span>
                     </div>
                     <div class="tac home_pro4 font_18 col_2 ab_20">
-                    </div>
+                    </div> -->
                   </div>
                 </router-link>
               </div>
@@ -253,14 +254,14 @@
             <p></p>
             <p></p>
             <div class="box_flex_art">
-              {{ item.title }}
+             <span class="color2"> {{ item.title }}</span>
             </div>
             <p></p>
             <div class="box_flex_art font_14" style="color:rgba(0,0,0,.6)">
               {{ item.create_time | timestampToTime(item.create_time) }}
             </div>
             <p></p>
-            <div class="box_flex_art font_14" style="color:rgba(0,0,0,.6)">
+            <div class="box_flex_art font_12" style="color:rgba(0,0,0,.6)">
               {{ toel2(item.short_desc, 100) }}
             </div>
           </router-link>
@@ -276,14 +277,14 @@
             <p></p>
             <p></p>
             <div class="box_flex_art">
-              {{ homenews[item].title }}
+             <span class="color2"> {{ homenews[item].title }}</span>
             </div>
             <p></p>
             <div class="box_flex_art font_14" style="color:rgba(0,0,0,.6)">
               {{ homenews[item].create_time | timestampToTime(homenews[item].create_time) }}
             </div>
             <p></p>
-            <div class="box_flex_art font_14" style="color:rgba(0,0,0,.6)">
+            <div class="box_flex_art font_12" style="color:rgba(0,0,0,.6)">
               {{ toel2(homenews[item].short_desc, 100) }}
             </div>
           </router-link>
@@ -294,17 +295,17 @@
     <!--AladdinMiner Advantages-->>
     <div class="content home_3 home_8 home_item">
       <div class="home_item_t">
-        <!-- <span class="line"></span> -->
-        <span class="font_40">AladdinMiner Advantages</span>
-        <!-- <span class="line"></span> -->
+        <span class="line"></span>
+        <span class="font_40">Miners1688 Advantages</span>
+        <span class="line"></span>
       </div>
       <div class="home_item_t_art">
-        <span class="line2"></span>
-        <span class="font_18 col_10">We provide perfect pre-sales and after-sales service.</span>
-        <span class="line2"></span>
+        <!-- <span class="line2"></span> -->
+        <span class="font_18 color2">We provide perfect pre-sales and after-sales service.</span>
+        <!-- <span class="line2"></span> -->
       </div>
       <div class="home_item_t_art">
-        Besides our own products (Aladdin miner), we also have various resources to collect other machines which is in
+        Besides our own products (Miners1688), we also have various resources to collect other machines which is in
         the best condition.
       </div>
       <div class="home_item_t_art">
@@ -317,7 +318,7 @@
             <img src="../../img/Testing.png" alt="">
           </div>
           <div class="advantages_art">
-            <div class="advantages_art_t col_11">TESTING</div>
+            <div class="advantages_art_t">TESTING</div>
             <div class="advantages_art_c">We will test every machines to ensure the due hash rate. The fans, hashboards
               and every single
               components in the machines will be tested accordingly.</div>
@@ -328,7 +329,7 @@
             <img src="../../img/repair.png" alt="">
           </div>
           <div class="advantages_art">
-            <div class="advantages_art_t col_11">REPAIR</div>
+            <div class="advantages_art_t">REPAIR</div>
             <div class="advantages_art_c">After testing, if there're problems with the machines, we'll fix them all to
               make sure the machines run smoothly.</div>
           </div>
@@ -341,7 +342,7 @@
             <img src="../../img/cleaning.png" alt="">
           </div>
           <div class="advantages_art">
-            <div class="advantages_art_t col_11">CLEANING</div>
+            <div class="advantages_art_t">CLEANING</div>
             <div class="advantages_art_c">We can clean and polish the machines according to clients' requirement. To a
               certain extent, we can make the machines as new as the original one.</div>
           </div>
@@ -351,7 +352,7 @@
             <img src="../../img/Video-taking.png" alt="">
           </div>
           <div class="advantages_art">
-            <div class="advantages_art_t col_11">VIDEO TAKING</div>
+            <div class="advantages_art_t">VIDEO TAKING</div>
             <div class="advantages_art_c">We provide videos for every single machines. Basically, clients can see the
               average hash rate, instant hash rate, the appearance, the serial code of machines. If clients require
               particular content in the video, we'll also fulfill.</div>
@@ -365,7 +366,7 @@
             <img src="../../img/Packaging.png" alt="">
           </div>
           <div class="advantages_art">
-            <div class="advantages_art_t col_11">PACKAGING</div>
+            <div class="advantages_art_t">PACKAGING</div>
             <div class="advantages_art_c">It's well know that, miner is a kind of fragile machine so we pay highly
               attention to the packaging. We have customized packaging foam for the miners which can greatly protect the
               miners from being crashed.</div>
@@ -376,7 +377,7 @@
             <img src="../../img/After-sales-service.png" alt="">
           </div>
           <div class="advantages_art">
-            <div class="advantages_art_t col_11">AFTER-SALES SERVICE</div>
+            <div class="advantages_art_t">AFTER-SALES SERVICE</div>
             <div class="advantages_art_c">If clients meet any problems during operating the miners, we'll assist them to
               solve. If the miners need to be repaired, clients can send them back to us, we'll repair for them.</div>
           </div>
@@ -545,7 +546,7 @@ export default {
   height: 63px;
   padding: 10px 0 10px 20px;
   margin-bottom: 40px;
-  border-left: 8px solid #ff4500;
+  border-left: 8px solid #4361ff;
   text-align: left;
 }
 
@@ -555,7 +556,9 @@ export default {
   height: 356px;
   word-break: break-all;
 }
-
+.home1_art_main{
+  font-size: 24px;
+}
 .home1_art_t {
   font-size: 24px;
   color: #111;

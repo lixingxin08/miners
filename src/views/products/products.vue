@@ -317,10 +317,11 @@ export default {
 }
 
 .pro_r_img {
-    width: 100%;
+    width: 150px;
     height: 150px;
     text-align: center;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .pro_r {

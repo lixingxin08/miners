@@ -26,13 +26,13 @@
           </div>
           <div class="flex_f" style="margin-bottom: 10px">
             <a-input ref="userNameInput" v-model="formdata.country_code" placeholder="+" style="width:84px;margin-right: 6px">
-              <a-icon slot="prefix" type="phone" theme="filled" style="color: #ff4500;" />
+              <a-icon slot="prefix" type="phone" theme="filled" style="color: #4361ff;" />
             </a-input>
             <a-input style="flex:1;" v-model="formdata.phone"  />
           </div>
           <div class="flex_f" style="margin-bottom: 10px;">
             <a-input ref="userNameInput" v-model="formdata.email" placeholder="Email">
-              <a-icon slot="prefix" type="mail" theme="filled" style="color: #ff4500;" />
+              <a-icon slot="prefix" type="mail" theme="filled" style="color: #4361ff;" />
             </a-input>
           </div>
           <div class="flex_f" style="margin-bottom: 10px;">
@@ -67,6 +67,7 @@
   </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
@@ -82,16 +83,26 @@ export default {
   },
   methods: {
     async feedback() {
-      // let res = resdata
-      // this.bannerdata = res.data
-     
-      let res = await this.$http.post(this.$api.feedback,this.formdata)
-      if(res.data.code==200){
-        this.$message.succes(res.message)
-      }else {
-        this.$message.error(res.message)
-      }
-    },
+            // let res = resdata
+            // this.bannerdata = res.data
+            const formData = new FormData()
+            let _that = this
+            formData.append('country_code', _that.formdata.country_code)
+            formData.append('phone', _that.formdata.phone)
+            formData.append('email', _that.formdata.email)
+            formData.append('description', _that.formdata.description)
+            let res = await axios({
+                url: _that.$api.feedback,
+                method: 'post',
+                data:formData
+                
+            })
+            if (res.data.code == 200) {
+                this.$message.succes(res.data.msg)
+            } else {
+                this.$message.error(res.data.msg)
+            }
+        },
     setdata(){
       if (!this.$utils.verNum(this.formdata.country_code)) {
         this.$message.warning('Wrong format of Country Code')
@@ -139,12 +150,12 @@ export default {
   height: 450px;
   position: absolute;
   background-color: #fff;
-  border: 4px solid orange;
+  border: 4px solid #4361ff;
 }
 
 .card_t {
   width: 100%;
-  background-color: orange;
+  background-color: #4361ff;
   color: #fff;
   padding: 10px;
   font-weight: 600;
@@ -175,7 +186,7 @@ export default {
   height: 450px;
   position: absolute;
   font-size: 40px;
-  color: orange;
+  color: #4361ff;
   padding-right: 60px;
   left: 300px;
   top: 450px;

@@ -78,6 +78,7 @@
 <script>
 import resdata from './index.json'
 import { mapState } from 'vuex'
+import axios from 'axios'
 export default {
     data() {
         return {
@@ -95,11 +96,24 @@ export default {
     },
     methods: {
         async feedback() {
-            let res = await this.$http.post(this.$api.feedback, this.formdata)
+            // let res = resdata
+            // this.bannerdata = res.data
+            const formData = new FormData()
+            let _that = this
+            formData.append('country_code', _that.formdata.country_code)
+            formData.append('phone', _that.formdata.phone)
+            formData.append('email', _that.formdata.email)
+            formData.append('description', _that.formdata.description)
+            let res = await axios({
+                url: _that.$api.feedback,
+                method: 'post',
+                data:formData
+                
+            })
             if (res.data.code == 200) {
-                this.$message.succes(res.message)
+                this.$message.succes(res.data.msg)
             } else {
-                this.$message.error(res.message)
+                this.$message.error(res.data.msg)
             }
         },
         setdata() {
