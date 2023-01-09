@@ -12,6 +12,10 @@ const news_detail = () => import('@/views/news/news_detail')
 const cases = () => import('@/views/cases/cases')
 const casesdetail = () => import('@/views/cases/casesdetail')
 const contactus = () => import('@/views/contactus/contactus')
+const Privacy = () => import('@/views/company/Privacy')
+const Shipping = () => import('@/views/company/Shipping')
+const Terms = () => import('@/views/company/Terms')
+const Warranty = () => import('@/views/company/Warranty')
 
 
 const error_404 = () => import('@/components/error_page/404.vue')
@@ -73,6 +77,26 @@ export default new Router({
       path: '/contactus',
       name: 'contactus',
       component: contactus
+    },
+    {
+      path: '/Privacy',
+      name: 'Privacy',
+      component: Privacy
+    },
+    {
+      path: '/Shipping',
+      name: 'Shipping',
+      component: Shipping
+    },
+    {
+      path: '/Terms',
+      name: 'Terms',
+      component: Terms
+    },
+    {
+      path: '/Warranty',
+      name: 'Warranty',
+      component: Warranty
     },
 
     {

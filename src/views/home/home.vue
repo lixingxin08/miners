@@ -4,14 +4,14 @@
       <iscarousel :bannerdata="bannerdata"></iscarousel>
     </div>
 
-    <div class="content flex_fs">
+    <div class="content flex_b home_company">
       <!-- <procarousel></procarousel> -->
-      <div class="home_company flex_a"><img src="../../img/iPollo.png" alt=""> </div>
-      <div class="home_company flex_a"><img src="../../img/whatsminer.png" alt=""> </div>
-      <div class="home_company flex_a"><img src="../../img/iBLink.png" alt=""> </div>
-      <div class="home_company flex_a"><img src="../../img/Goldshell.png" alt=""> </div>
-      <div class="home_company flex_a"><img src="../../img/canaan.png" alt=""> </div>
-      <div class="home_company flex_a"><img src="../../img/Antminer.png" alt=""> </div>
+      <img src="../../img/iPollo.png" alt=""> 
+      <img src="../../img/whatsminer.png" alt=""> 
+      <img src="../../img/iBLink.png" alt="">
+      <img src="../../img/Goldshell.png" alt=""> 
+      <img src="../../img/canaan.png" alt=""> 
+      <img src="../../img/Antminer.png" alt="">
     </div>
     <div class="flex_fs home_1 home_item">
       <!-- <div class="home1_img">
@@ -20,7 +20,7 @@
       <div class="content">
         <div>
           <div class="home_title">
-            <span class="font_f1 col_style2" style="font-size: 36px; font-weight: bold">Marine King Miner</span>
+            <span class="font_f1 col_style2" style="font-size: 36px; font-weight: bold">Miners1688</span>
             <!-- <router-link :to="{'name':'aboutus','query':{'usid':0}}">
               <span class="color1 underline" style="font-size: 18px; font-weight: bold; margin-left: 30px">View
                 More</span>
@@ -42,7 +42,7 @@
                 <div class="home1_art_t">Marine King Miner</div>
               </router-link> -->
               <router-link :to="{ 'name': 'aboutus', 'query': { 'usid': 0 } }">
-                <div ref="test" @click="toeli()" class="iscursor col_0 home1_art_main font_f3"
+                <div ref="test" @click="toeli()" class="iscursor col_style2 home1_art_main font_f3"
                   style="line-height: 48px;">
                   At the beginning of establishment, Miners1688 has built its version: to make crypto mining easy,
                   friendly and unblocked.
@@ -206,9 +206,9 @@
                 <img :src="this.bannerdata[7].product_img" alt="" class="extent_box toscaleimg ab" />
                 <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[6].id } }">
                   <div class="extent_box font_f2">
-                    <div class="tac home_pro1 font_24">{{ bannerdata[7].title }}</div>
-                    <div class="tac home_pro2 font_16_col_2b">{{ bannerdata[7].algorithm }}</div>
-                    <div class="tac home_pro3 font_16_col_2b">
+                    <div class="tac home_pro5 font_24">{{ bannerdata[7].title }}</div>
+                    <div class="tac home_pro6 font_16_col_2b">{{ bannerdata[7].algorithm }}</div>
+                    <div class="tac home_pro7 font_16_col_2b">
                       <span>{{ bannerdata[7].hashrate | filnum(bannerdata[7].hashrate) }}</span>|
                       <span>{{ bannerdata[7].power_watt | filnum(bannerdata[7].power_watt) }}</span> |
                       <span>{{ bannerdata[7].power_jth | filnum(bannerdata[7].power_jth) }}</span>
@@ -222,7 +222,7 @@
                 <img src="https://www-static.bitmain.com/_nuxt/img/9ca12a3.jpg" alt=""
                   class="extent_box toscaleimg ab" />
                 <router-link :to="{ 'name': 'products', 'query': { 'id': '' } }">
-                  <div class="tac home_pro1 font_24 flex_a">
+                  <div class="tac home_pro1 font_24 flex_a col_style2">
                     More Products  
                   </div>
                 </router-link>
@@ -519,12 +519,10 @@ export default {
   padding-bottom: 20PX;
 }
 .home_company{
-  flex:1;
   height: 160px;
+  padding-bottom: 20px;
 }
-.home_company img{
 
-}
 .home1_img {
   position: absolute;
   left: 0;
@@ -787,16 +785,32 @@ export default {
 .home_pro1 {
   margin-top: 30px;
   margin-bottom: 28px;
-  color: #000;
-  
+  color: #2b2b2b;
+}
+.home_pro5 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: #2b2b2b;
+  padding-left: 20px;
+  text-align: left;
+}
+.home_pro6 {
+  color: #2b2b2b;
+  padding-left: 20px;
+  text-align: left;
+}
+.home_pro7 {
+  color: #2b2b2b;
+  padding-left: 20px;
+  text-align: left;
 }
 .tac_1{
   text-align: center;
 }
 .home_pro2 {
   margin-bottom: 10px;
-  color: #000;
 }
+
 
 .home_pro3 {
   color: #000;

@@ -1,10 +1,10 @@
 <template>
-  <a-carousel autoplay :dots=true arrows>
-    <div slot="prevArrow" slot-scope="props" class="custom-slick-arrow" style="left: 13%;zIndex: 1; transform: translateY(-50%); font-size: 40px; color: #4361ff;">
-      <a-icon type="left-circle" />
+  <a-carousel autoplay :dots=true arrows class="home_show_arrows">
+    <div slot="prevArrow" slot-scope="props" class="custom-slick-arrow" style="left: 13%;zIndex: 1; transform: translateY(-50%); font-size: 40px; color: #999;">
+      <a-icon type="left-circle" class="show_arrows" />
     </div>
-    <div slot="nextArrow" slot-scope="props" class="custom-slick-arrow" style="right: 13% ;transform: translateY(-50%); font-size: 40px; color: #4361ff;">
-      <a-icon type="right-circle" />
+    <div slot="nextArrow" slot-scope="props" class="custom-slick-arrow" style="right: 13% ;transform: translateY(-50%); font-size: 40px; color: #999;">
+      <a-icon type="right-circle"  class="show_arrows"  />
     </div>
     <div v-for="(item, index) in bannerdata" :key="index">
       <div>
@@ -41,5 +41,13 @@ export default {
 .home_carouselimg {
   width: 100%;
   height: 500px;
+}
+.show_arrows{
+  visibility: hidden;
+
+}
+.home_show_arrows:hover .show_arrows{
+  visibility: visible;
+  opacity: 0.5;
 }
 </style>

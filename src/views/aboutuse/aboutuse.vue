@@ -4,7 +4,7 @@
             <img src="../../img/20220913150636.png" alt="" class="extent_box">
             <div class="top_msg">
                 <div class="top_title"> Company Profile</div>
-                <div class="top_title_b">Home / Marine King Miner</div>
+                <div class="top_title_b">Home / Miners1688</div>
             </div>
         </div>
         <div class="content flex_fs">
@@ -37,7 +37,7 @@
             <div class="flex_col_fs box_shadown abou_r">
                 <div class="extent_box" v-if="aboutusid==0">
                     <div class="extent_box">
-                        <div class="abou_r_t">Marine King Miner</div>
+                        <div class="abou_r_t">Miners1688</div>
                         <div class="about_carsel">
                             <aboutcarousel></aboutcarousel>
                         </div>
@@ -71,11 +71,11 @@
                         <div class="item_title">INTRODUCTION</div>
                         <div class="line"></div>
                         <div class="about_art">
-                            <h2>Headquartered in Chengdu, Marine King Miner is one of the top three asic miner suppliers
+                            <h2>Headquartered in Chengdu, Miners1688 is one of the top three asic miner suppliers
                                 in
                                 China.</h2>
                             <h2></h2>
-                            <h2>As an experienced supplier in this line, Marine King Miner has close business
+                            <h2>As an experienced supplier in this line, Miners1688 has close business
                                 relationship
                                 with asic manufacturers like Bitmain, Innosilicon, Canaan, MicroBT, Goldshell and it is
                                 able

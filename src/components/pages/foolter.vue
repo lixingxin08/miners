@@ -59,8 +59,8 @@
                     COMPANY POLICY
                 </div>
                 <div class="fool_message" v-for="(item, index) in productsList" :key="index">
-                    <router-link :to="{ 'name': 'products', 'query': { 'id': item.id } }">
-                        <span class="fool_message col_f">> {{ item.cname }}</span>
+                    <router-link :to="{ 'name': item.name}">
+                        <span class="fool_message col_f" style="cursor:pointer">> {{ item.cname }}</span>
                     </router-link>
                 </div>
             </div>
@@ -101,13 +101,13 @@ export default {
             opentype: 0,
             showtype: true,
             productsList: [{
-                cname: 'Shipping & Payment Policies',
+                cname: 'Shipping & Payment Policies',name:'Shipping'
             }, {
-                cname: 'Warranty & Refund Policy',
+                cname: 'Warranty & Refund Policy',name:'Warranty'
             }, {
-                cname: 'Privacy policy',
+                cname: 'Privacy policy',name:'Privacy'
             }, {
-                cname: 'Terms & Conditions',
+                cname: 'Terms & Conditions',name:'Terms'
             }],
             formdata: {
                 name: '',
@@ -123,19 +123,9 @@ export default {
         ...mapState(['companyInfo'])
     },
     created() {
-        //  this.getProductsList()
     },
     methods: {
-        async getProductsList() {
-            // let res = resdata.productlist
-            // this.productsList = res.data
-            let res = await this.$http.get(this.$api.getProductsList)
-            if (res.data.code == 200) {
-                this.productsList = res.data.data.product
-            } else {
-                this.$message.error(res.data.msg)
-            }
-        },
+
         async feedback() {
             // let res = resdata
             // this.bannerdata = res.data

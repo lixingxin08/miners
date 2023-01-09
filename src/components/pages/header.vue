@@ -124,7 +124,7 @@ export default {
   background-color: #fff;
   z-index: 999;
   box-shadow: 0 0px 4px rgb(0 0 0 / 8%);
-  font-weight: bold;
+  color: #393939;
 }
 
 .ismenuchild {
