@@ -32,25 +32,34 @@
                     <div class="dialog_r_t">
                         We will call you back soon!
                     </div>
-                    <div class="flex_f" style="margin-bottom: 10px;margin-top:20px;width: 100%;">
+
+                    <div class="flex_f" style="margin-bottom: 10px;width: 100%; margin-top:20px">
+                        <a-input v-model="formdata.name" placeholder="Name"
+                            style="width:50%;height:44px;margin-right: 6px;"
+                            class="sub_inp"
+                            >
+                        </a-input>
+                        <a-input style="flex:1;height: 44px;" v-model="formdata.contact" placeholder="Whatapp/tele" class="sub_inp" />
+                    </div>
+                    <div class="flex_f" style="margin-bottom: 10px;width: 100%;">
+                        <a-input v-model="formdata.country_code" placeholder="CountryCode" class="sub_inp"
+                            style="width:50%;height:44px;margin-right: 6px">
+                        </a-input>
+                        <a-input style="flex:1;height: 44px;" v-model="formdata.phone" placeholder="Phone Number" class="sub_inp" />
+                    </div>
+                    <div class="flex_f" style="margin-bottom: 10px;width: 100%;">
+                        <a-input v-model="formdata.email" placeholder="Enter your E-mail" style="height: 44px;" class="sub_inp">
+                        </a-input>
+                    </div>
+                    <div class="flex_f" style="margin-bottom: 10px;width: 100%;">
                         <template>
                             <a-textarea v-model="formdata.description" placeholder="Please enter your inquiry details."
-                                :rows="6">
+                                :rows="6" class="sub_inp">
                             </a-textarea>
                         </template>
                     </div>
-                    <div class="flex_f" style="margin-bottom: 10px;width: 100%;">
-                        <a-input v-model="formdata.email" placeholder="Enter your E-mail" style="height: 44px;">
-                        </a-input>
-                    </div>
-
-                    <div class="flex_f" style="margin-bottom: 10px;width: 100%;">
-                        <a-input v-model="formdata.country_code" placeholder="+CountryCode"
-                            style="width:84px;height:44px;margin-right: 6px">
-                        </a-input>
-                        <a-input style="flex:1;height: 44px;" v-model="formdata.phone" placeholder="Phone Number" />
-                    </div>
-                    <div class="btn_box2" style="width:200px;height: 44px;margin-top: 40px;" @click="setdata()">
+                    <div class="btn_box2" style="width:200px;height: 44px;margin:0 auto; margin-top:20px;"
+                        @click="setdata()">
                         <div class="btn">Submit</div>
                     </div>
                 </div>
@@ -74,6 +83,8 @@ export default {
     data() {
         return {
             formdata: {
+                name: '',
+                contact: '',
                 country_code: '',
                 phone: '',
                 email: '',
@@ -87,6 +98,8 @@ export default {
             // this.bannerdata = res.data
             const formData = new FormData()
             let _that = this
+            formData.append('name', _that.formdata.name)
+            formData.append('contact', _that.formdata.contact)
             formData.append('country_code', _that.formdata.country_code)
             formData.append('phone', _that.formdata.phone)
             formData.append('email', _that.formdata.email)
@@ -94,11 +107,17 @@ export default {
             let res = await axios({
                 url: _that.$api.feedback,
                 method: 'post',
-                data:formData
-                
+                data: formData
+
             })
+            if (res.data.code == 10001) {
+                this.$message.success(res.data.msg)
+                return
+            }
             if (res.data.code == 200) {
-                this.$message.succes(res.data.msg)
+              
+                this.$message.success(res.data.msg)
+
             } else {
                 this.$message.error(res.data.msg)
             }
@@ -171,5 +190,8 @@ export default {
     text-align: left;
     font-size: 24px;
     font-weight: 450;
+}
+.sub_inp{
+    border-radius: 22px;
 }
 </style>

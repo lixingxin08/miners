@@ -1,5 +1,5 @@
 .content{
-    width: 63.157%;
+    width: 75%;
     margin: 0 auto;
   }
 .item_title {
@@ -36,6 +36,7 @@
     height: 523px;
     margin-bottom: 20px;
     background-color: #fff;
+    
 }
 
 .box_flex:nth-child(3n) {
@@ -61,6 +62,7 @@
     cursor: pointer; 
     background-color: #4361ff;
     color: #fff;
+    border-radius: 20px;
   }
   .btn_box{
     width: 100%;
@@ -78,8 +80,23 @@
     line-height: 44px;
     font-size: 16px;
   }
+  .btn_box3{
+    width: 140px;
+    padding: 0 10px;
+    margin: 0 auto;
+    height: 40px;
+    margin-top:50px;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid #000;
+    cursor: pointer; 
+    text-align: center;
+
+  }
   .btn:hover{
-    background-color: orange;
+    /* background-color: orange; */
   }
   .col_1{
     color: orange;
@@ -143,8 +160,20 @@
     font-size: 40px;
     font-weight: bold;
 }
+.font_36{
+    font-size: 36px;
+    font-weight: bold;
+}
 .font_22{
     font-size: 22px;
+    font-weight: 400;
+}
+.font_24{
+    font-size: 24px;
+    font-weight: 400;
+}
+.font_26{
+    font-size: 26px;
     font-weight: 400;
 }
 .font_18{
@@ -160,12 +189,15 @@
 }
 .font_16{
     font-size: 16px;
-    color: #000;
+    text-align: center;
+}
+.font_16_col_2b{
+    font-size: 16px;
+    color: #2b2b2b;
     text-align: center;
 }
 .font_30{
     font-size: 30px;
-    color: #000;
     text-align: left;
     font-weight: 500;
 }
@@ -189,5 +221,5 @@
 .font_35{
     font-size: 35px;
     font-weight: 700;
-    color: #F4852A;
+    color: #555;
 }

@@ -1,100 +1,117 @@
 <template>
     <div class="fool">
-        <div class="flex_fs fool_main">
+        <div class="flex_fs fool_main font_f4">
             <div class="fool_item fool1">
-                <div class="fol_title">
-                    Marine King Miner
+                <div class="foollogo">
+                    <img src="../../img/foollogo.png" alt="">
                 </div>
                 <div class="fool_message">
-                    <a-icon type="mail" />  {{companyInfo[0].email}}
+                    <a-icon type="mail" /> {{ companyInfo[0].email }}
                 </div>
                 <div class="fool_message">
-                    <a-icon type="phone" theme="filled" />  {{companyInfo[0].tel}}
+                    <a-icon type="phone" theme="filled" /> {{ companyInfo[0].tel }}
                 </div>
                 <div class="fool_message">
-                    <a-icon type="environment" /> {{companyInfo[0].office_address}}
+                    <a-icon type="environment" /> {{ companyInfo[0].office_address }}
                 </div>
-                <div class="font_22">
-                    <a-icon type="facebook" class="fool_message iscursor" />
-                    <a-icon type="twitter" class="fool_message iscursor" />
-                    <a-icon type="youtube" class="fool_message iscursor" />
+                <div class="fool_b_logo">
+                   <a href="#">
+                    <img src="../../img/Facebook.png" class="telegram_img" alt="">
+                   </a>
+                   <a href="#">
+                    <img src="../../img/Twitter.png" class="telegram_img" alt="">
+                   </a>
+                   <a href="#">
+                    <img src="../../img/Youtube.png" class="telegram_img" alt="">
+                   </a>
+                   <a href="#">
+                    <img src="../../img/Telegram.png" class="telegram_img" alt="">
+                   </a>
                 </div>
             </div>
             <div class="fool_item fool2">
-                <div class="fol_title">
+                <div class="fol_title font_f1">
                     About
                 </div>
                 <div class="fool_message">
-                    <router-link :to="{'name':'aboutus','query':{'usid':0}}">
-                        <span class="fool_message col_f"> Company Profile</span>
+                    <router-link :to="{ 'name': 'aboutus', 'query': { 'usid': 0 } }">
+                        <span class="fool_message col_f">> Company Profile</span>
                     </router-link>
                 </div>
                 <div class="fool_message">
-                    <router-link :to="{'name':'aboutus','query':{'usid':2}}">
-                        <span class="fool_message col_f"> Quality Control</span>
+                    <router-link :to="{ 'name': 'aboutus', 'query': { 'usid': 2 } }">
+                        <span class="fool_message col_f">> Quality Control</span>
                     </router-link>
                 </div>
                 <div class="fool_message">
-                    <router-link :to="{'name':'contactus'}">
-                        <span class="fool_message col_f"> Contact Us</span>
+                    <router-link :to="{ 'name': 'contactus' }">
+                        <span class="fool_message col_f">> Contact Us</span>
                     </router-link>
 
                 </div>
-                <div class="fool_message">Sitemap</div>
-                <div class="fool_message">Privacy Policy</div>
+                <div class="fool_message">> Sitemap</div>
+                <div class="fool_message">> Privacy Policy</div>
             </div>
 
 
             <div class="fool_item fool3">
-                <div class="fol_title">
-                    Products
+                <div class="fol_title font_f1">
+                    COMPANY POLICY
                 </div>
-                <div class="fool_message"  v-for="(item,index) in productsList" :key="index">
-                    <router-link :to="{'name':'products','query':{'id':item.id}}">
-                        <span class="fool_message col_f"> {{item.cname}}</span>
+                <div class="fool_message" v-for="(item, index) in productsList" :key="index">
+                    <router-link :to="{ 'name': 'products', 'query': { 'id': item.id } }">
+                        <span class="fool_message col_f">> {{ item.cname }}</span>
                     </router-link>
                 </div>
             </div>
             <div class="fool_item fool4">
-                <div class="fol_title">
+                <div class="fol_title font_f1">
                     Mail Us
                 </div>
                 <div class="fool_message">Let us know your requirement. We will connect best products with you.</div>
-                <div class="flex_f" style="margin-bottom: 10px;margin-top: 10px">
-                    <a-input  v-model="formdata.country_code" placeholder="+CountryCode" 
-                        style="width:84px;margin-right: 6px;">
-                        <a-icon slot="prefix" type="phone" theme="filled" style="color: #4361ff;" />
-                    </a-input>
-                    <a-input style="flex:1;" v-model="formdata.phone" placeholder="Your Phone" class="f_inp" />
+                <div class="fool_inp" style="display:flex; align-items: center; margin-bottom: 6px;margin-top: 10px">
+                    <a-input placeholder="Name" v-model="formdata.name" style="margin-right:6px" class="footer_inp" />
+                    <a-input placeholder="Whatapp/tele" v-model="formdata.contact"  class="footer_inp" />
+                </div>
+                <div class="flex_f" style="margin-bottom: 6px;">
+                    <a-input   v-model="formdata.country_code" placeholder="CountryCode" style="width:50%;margin-right: 6px;" class="footer_inp" />
+
+                    <a-input style="flex:1;" v-model="formdata.phone" placeholder="Your Phone" class="footer_inp" />
                 </div>
                 <div class="fool_inp">
-                    <a-input placeholder="Your E-mail" v-model="formdata.email" />
+                    <a-input placeholder="Your E-mail" v-model="formdata.email" class="footer_inp" />
                 </div>
-                <div class="fool_inp" ><template>
+                <div  style="margin-top:8px"><template>
                         <a-textarea
-                            placeholder="Enter product details (such as color,size,materials etc.) and other specific requirements to receive an accurate quote.*"
-                            :rows="4" v-model="formdata.description" />
+                            placeholder="Fill in your basic plans and budgets(e.g. machine type,name or model,parts,accessories,shipping and delivery)to get free quote with the best machine for you."
+                            :rows="4" v-model="formdata.description" class="footer_inp" />
                     </template>
                 </div>
-
-
-                <div class="btn_box fool_inp">
-                    <div class="btn" @click="setdata()">Send Message</div>
-                </div>
+                    <div class="foot_btn" @click="setdata()">Send Message</div>
             </div>
         </div>
     </div>
 </template>
 <script>
-    import { mapState } from 'vuex'
-    import axios from 'axios'
+import { mapState } from 'vuex'
+import axios from 'axios'
 export default {
     data() {
         return {
             opentype: 0,
             showtype: true,
-            productsList: '',
+            productsList: [{
+                cname: 'Shipping & Payment Policies',
+            }, {
+                cname: 'Warranty & Refund Policy',
+            }, {
+                cname: 'Privacy policy',
+            }, {
+                cname: 'Terms & Conditions',
+            }],
             formdata: {
+                name: '',
+                contact: '',
                 country_code: '',
                 phone: '',
                 email: '',
@@ -102,11 +119,11 @@ export default {
             }
         };
     },
-    computed:{
+    computed: {
         ...mapState(['companyInfo'])
     },
-    created(){
-         this.getProductsList()
+    created() {
+        //  this.getProductsList()
     },
     methods: {
         async getProductsList() {
@@ -116,7 +133,7 @@ export default {
             if (res.data.code == 200) {
                 this.productsList = res.data.data.product
             } else {
-                this.$message.error(res.message)
+                this.$message.error(res.data.msg)
             }
         },
         async feedback() {
@@ -124,6 +141,8 @@ export default {
             // this.bannerdata = res.data
             const formData = new FormData()
             let _that = this
+            formData.append('name', _that.formdata.name)
+            formData.append('contact', _that.formdata.contact)
             formData.append('country_code', _that.formdata.country_code)
             formData.append('phone', _that.formdata.phone)
             formData.append('email', _that.formdata.email)
@@ -131,12 +150,18 @@ export default {
             let res = await axios({
                 url: _that.$api.feedback,
                 method: 'post',
-                data:formData
-                
+                data: formData
+
             })
+
+            if (res.data.code == 10001) {
+                this.$message.success(res.data.msg)
+                return
+            }
             if (res.data.code == 200) {
-                this.$message.succes(res.data.msg)
-            } else {
+                this.$message.success(res.data.msg)              
+            }
+             else {
                 this.$message.error(res.data.msg)
             }
         },
@@ -158,17 +183,32 @@ export default {
     },
 };
 </script>
+
 <style scoped>
 .fool {
     width: 100%;
-    height: 400px;
-    background-image: linear-gradient(to right ,#131838,#1E2C59,#2D5382,#367898);
+    height: 100%;
+    background-image: linear-gradient(to right, #131838, #1E2C59, #2D5382, #367898);
     color: #fff;
-   
-}
+    padding-bottom: 40px;
 
+}
+.foollogo{
+    width: 188px;
+    height: 40PX;
+}
+.foollogo img{
+    width: 100%;
+    height: 100%;
+}
+.telegram_img{
+    font-size: 26px;
+    width: 26px;
+    height: 26px;
+    margin-right: 20px;
+}
 .fool_main {
-    width: 960px;
+    width: 75%;
     margin: 0 auto;
     padding-top: 40px;
     flex-wrap: nowrap;
@@ -180,38 +220,60 @@ export default {
 }
 
 .fol_title {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 600;
 }
 
 .fool_message {
     margin-top: 22px;
     font-weight: normal;
+    font-size: 16px;
 }
 
 .fool_message:hover {
-    color: #ff4500;
+    opacity: 0.3;
 }
 
 .fool1 {
-    width: 400px;
+    width: 30%;
 }
 
 .fool2 {
-    width: 150px;
+    width: 20%;
 }
 
 .fool3 {
-    width: 200px;
+    width: 20%;
 }
 
 .fool4 {
-    width: 300px;
+    width: 30%;
 }
-
-.fool_inp {
-    margin-top: 6px;
-    padding: 0;
-    
+.fool_icon{
+    margin-right: 20px;
+    color: #fff;
+    font-size: 26px;
+}
+.footer_inp{
+    border-radius: 16px;
+    background-color: #376080;
+    border: 1px solid #496C8A;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.foot_btn{
+    width: 100%;
+    height: 32px;
+    border: 1px solid #496C8A;
+    background-color: #376080;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 16px;
+    cursor: pointer;
+    /* margin-top: 10px; */
+}
+.fool_b_logo{
+    margin-top: 22px;
 }
 </style>

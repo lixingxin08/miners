@@ -4,17 +4,23 @@
       <iscarousel :bannerdata="bannerdata"></iscarousel>
     </div>
 
-    <div class="content">
-      <procarousel></procarousel>
+    <div class="content flex_fs">
+      <!-- <procarousel></procarousel> -->
+      <div class="home_company flex_a"><img src="../../img/iPollo.png" alt=""> </div>
+      <div class="home_company flex_a"><img src="../../img/whatsminer.png" alt=""> </div>
+      <div class="home_company flex_a"><img src="../../img/iBLink.png" alt=""> </div>
+      <div class="home_company flex_a"><img src="../../img/Goldshell.png" alt=""> </div>
+      <div class="home_company flex_a"><img src="../../img/canaan.png" alt=""> </div>
+      <div class="home_company flex_a"><img src="../../img/Antminer.png" alt=""> </div>
     </div>
     <div class="flex_fs home_1 home_item">
-      <div class="home1_img">
+      <!-- <div class="home1_img">
         <img src="../../img/h_yyx_category_bg.png" alt="" />
-      </div>
+      </div> -->
       <div class="content">
         <div>
           <div class="home_title">
-            <span class="color2" style="font-size: 36px; font-weight: bold">Marine King Miner</span>
+            <span class="font_f1 col_style2" style="font-size: 36px; font-weight: bold">Marine King Miner</span>
             <!-- <router-link :to="{'name':'aboutus','query':{'usid':0}}">
               <span class="color1 underline" style="font-size: 18px; font-weight: bold; margin-left: 30px">View
                 More</span>
@@ -25,26 +31,22 @@
             <div class="home_itemimg">
               <!-- <img src="../../img/ss23.jpg" alt="" /> -->
               <div style="width:636px;height:356px"> <a class="twitter-timeline"
-                href="https://twitter.com/NHASH_Official?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3ANHASH_Official%7Ctwcon%5Es2"
-                data-tweet-limit="10" data-width="636" data-height="356">
-                Tweets by @TwitterDev
-              </a></div>
-             
+                  href="https://twitter.com/NHASH_Official?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3ANHASH_Official%7Ctwcon%5Es2"
+                  data-tweet-limit="10" data-width="636" data-height="356">
+                  Tweets by @TwitterDev
+                </a></div>
+
             </div>
             <div class="home1_art">
               <!-- <router-link :to="{ 'name': 'aboutus', 'query': { 'usid': 0 } }">
                 <div class="home1_art_t">Marine King Miner</div>
               </router-link> -->
               <router-link :to="{ 'name': 'aboutus', 'query': { 'usid': 0 } }">
-                <div ref="test" @click="toeli()" class="iscursor col_0 home1_art_main">
-                  Headquartered in Chengdu, Marine King Miner is one of the top
-                  three asic miner suppliers in China.As an experienced supplier
-                  in this line, Marine King Miner has close business relationship
-                  with asic manufacturers like Bitmain, Innosilicon, Canaan,
-                  MicroBT, Goldshell and it is able to supply the latest models in
-                  large quantity.For better customer service, it set up a factory
-                  in Dongguan, China with an efficient team to provide services
-                  like repairing, upgrading, dust cleaning and packaging. It
+                <div ref="test" @click="toeli()" class="iscursor col_0 home1_art_main font_f3"
+                  style="line-height: 48px;">
+                  At the beginning of establishment, Miners1688 has built its version: to make crypto mining easy,
+                  friendly and unblocked.
+                  We have been focused on the mining industry, satisfying our customers through best prices and quality.
                 </div>
               </router-link>
               <div class="home1_art_b flex_a">
@@ -72,7 +74,7 @@
       <!--Product-->
       <div class="home_item_t">
         <span class="line"></span>
-        <span class="font_40">Products</span>
+        <span class="font_40 font_f1">Products</span>
         <span class="line"></span>
       </div>
       <div class="products_box rel1">
@@ -81,16 +83,16 @@
             <div class="home_pro_i1 box_shadown rel">
               <img :src="this.bannerdata[0].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[0].id } }">
-                <div class="extent_box">
-                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[0].title }}</div>
-                  <div class="tac home_pro2 font_18">{{ bannerdata[0].algorithm }}</div>
-                  <div class="tac home_pro3 font_18">
+                <div class="extent_box font_f2">
+                  <div class="tac home_pro1 font_24">{{ bannerdata[0].title }}</div>
+                  <div class="tac home_pro2 font_16_col_2b">{{ bannerdata[0].algorithm }}</div>
+                  <div class="tac home_pro3 font_16_col_2b">
                     <span>{{ bannerdata[0].hashrate | filnum(bannerdata[0].hashrate) }}</span>|
                     <span>{{ bannerdata[0].power_watt | filnum(bannerdata[0].power_watt) }}</span> |
                     <span>{{ bannerdata[0].power_jth | filnum(bannerdata[0].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
-                  </div> -->
+                  </div>
                 </div>
               </router-link>
             </div>
@@ -98,17 +100,17 @@
             <div class="home_pro_i2 box_shadown rel">
               <img :src="this.bannerdata[1].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[1].id } }">
-                <div class="extent_box">
-                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[1].title }}</div>
-                  <div class="tac home_pro2 font_18">{{ bannerdata[1].algorithm }}</div>
-                  <div class="tac home_pro3 font_18">
+                <div class="extent_box font_f2">
+                  <div class="tac home_pro1 font_24">{{ bannerdata[1].title }}</div>
+                  <div class="tac home_pro2 font_16_col_2b">{{ bannerdata[1].algorithm }}</div>
+                  <div class="tac home_pro3 font_16_col_2b">
                     <span>{{ bannerdata[1].hashrate | filnum(bannerdata[1].hashrate) }}</span>|
                     <span>{{ bannerdata[1].power_watt | filnum(bannerdata[1].power_watt) }}</span> |
                     <span>{{ bannerdata[1].power_jth | filnum(bannerdata[1].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
 
-                  </div> -->
+                  </div>
                 </div>
               </router-link>
             </div>
@@ -117,34 +119,34 @@
             <div class="home_pro_i2 box_shadown rel" v-if="this.bannerdata.length >= 3">
               <img :src="this.bannerdata[2].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[2].id } }">
-                <div class="extent_box">
-                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[2].title }}</div>
-                  <div class="tac home_pro2 font_18">{{ bannerdata[2].algorithm }}</div>
-                  <div class="tac home_pro3 font_18">
+                <div class="extent_box font_f2">
+                  <div class="tac home_pro1 font_24">{{ bannerdata[2].title }}</div>
+                  <div class="tac home_pro2 font_16_col_2b">{{ bannerdata[2].algorithm }}</div>
+                  <div class="tac home_pro3 font_16_col_2b">
                     <span>{{ bannerdata[2].hashrate | filnum(bannerdata[2].hashrate) }}</span>|
                     <span>{{ bannerdata[2].power_watt | filnum(bannerdata[2].power_watt) }}</span> |
                     <span>{{ bannerdata[2].power_jth | filnum(bannerdata[2].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
 
-                  </div> -->
+                  </div>
                 </div>
               </router-link>
             </div>
             <div class="home_pro_i1 box_shadown rel" v-if="this.bannerdata.length >= 4">
               <img :src="this.bannerdata[3].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[3].id } }">
-                <div class="extent_box">
-                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[3].title }}</div>
-                  <div class="tac home_pro2 font_18">{{ bannerdata[3].algorithm }}</div>
-                  <div class="tac home_pro3 font_18">
+                <div class="extent_box font_f2">
+                  <div class="tac home_pro1 font_24">{{ bannerdata[3].title }}</div>
+                  <div class="tac home_pro2 font_16_col_2b">{{ bannerdata[3].algorithm }}</div>
+                  <div class="tac home_pro3 font_16_col_2b">
                     <span>{{ bannerdata[3].hashrate | filnum(bannerdata[3].hashrate) }}</span>|
                     <span>{{ bannerdata[3].power_watt | filnum(bannerdata[3].power_watt) }}</span> |
                     <span>{{ bannerdata[3].power_jth | filnum(bannerdata[3].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
 
-                  </div> -->
+                  </div>
                 </div>
               </router-link>
             </div>
@@ -153,49 +155,49 @@
             <div class="home_pro_i3 box_shadown rel" v-if="this.bannerdata.length >= 5">
               <img :src="this.bannerdata[4].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[4].id } }">
-                <div class="extent_box">
-                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[4].title }}</div>
-                  <div class="tac home_pro2 font_18">{{ bannerdata[4].algorithm }}</div>
-                  <div class="tac home_pro3 font_18">
+                <div class="extent_box font_f2">
+                  <div class="tac home_pro1 font_24">{{ bannerdata[4].title }}</div>
+                  <div class="tac home_pro2 font_16_col_2b">{{ bannerdata[4].algorithm }}</div>
+                  <div class="tac home_pro3 font_16_col_2b">
                     <span>{{ bannerdata[4].hashrate | filnum(bannerdata[4].hashrate) }}</span>|
                     <span>{{ bannerdata[4].power_watt | filnum(bannerdata[4].power_watt) }}</span> |
                     <span>{{ bannerdata[4].power_jth | filnum(bannerdata[4].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
 
-                  </div> -->
+                  </div>
                 </div>
               </router-link>
             </div>
             <div class="home_pro_i3 box_shadown rel" v-if="this.bannerdata.length >= 6">
               <img :src="this.bannerdata[5].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[5].id } }">
-                <div class="extent_box">
-                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[5].title }}</div>
-                  <div class="tac home_pro2 font_18">{{ bannerdata[5].algorithm }}</div>
-                  <div class="tac home_pro3 font_18">
+                <div class="extent_box font_f2">
+                  <div class="tac home_pro1 font_24">{{ bannerdata[5].title }}</div>
+                  <div class="tac home_pro2 font_16_col_2b">{{ bannerdata[5].algorithm }}</div>
+                  <div class="tac home_pro3 font_16_col_2b">
                     <span>{{ bannerdata[5].hashrate | filnum(bannerdata[5].hashrate) }}</span>|
                     <span>{{ bannerdata[5].power_watt | filnum(bannerdata[5].power_watt) }}</span> |
                     <span>{{ bannerdata[5].power_jth | filnum(bannerdata[5].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
-                  </div> -->
+                  </div>
                 </div>
               </router-link>
             </div>
             <div class="home_pro_i3 box_shadown rel" v-if="this.bannerdata.length >= 7">
               <img :src="this.bannerdata[6].product_img" alt="" class="extent_box toscaleimg ab" />
               <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[6].id } }">
-                <div class="extent_box">
-                  <!-- <div class="tac home_pro1 font_22">{{ bannerdata[6].title }}</div>
-                  <div class="tac home_pro2 font_18">{{ bannerdata[6].algorithm }}</div>
-                  <div class="tac home_pro3 font_18">
+                <div class="extent_box font_f2">
+                  <div class="tac home_pro1 font_24">{{ bannerdata[6].title }}</div>
+                  <div class="tac home_pro2 font_16_col_2b">{{ bannerdata[6].algorithm }}</div>
+                  <div class="tac home_pro3 font_16_col_2b">
                     <span>{{ bannerdata[6].hashrate | filnum(bannerdata[6].hashrate) }}</span>|
                     <span>{{ bannerdata[6].power_watt | filnum(bannerdata[6].power_watt) }}</span> |
                     <span>{{ bannerdata[6].power_jth | filnum(bannerdata[6].power_jth) }}</span>
                   </div>
                   <div class="tac home_pro4 font_18 col_2 ab_20">
-                  </div> -->
+                  </div>
                 </div>
               </router-link>
             </div>
@@ -203,16 +205,16 @@
               <div class="home_pro_end rel" v-if="this.bannerdata.length >= 8">
                 <img :src="this.bannerdata[7].product_img" alt="" class="extent_box toscaleimg ab" />
                 <router-link :to="{ 'name': 'productsdetail', 'query': { 'goods_id': this.bannerdata[6].id } }">
-                  <div class="extent_box">
-                    <!-- <div class="tac home_pro1 font_22">{{ bannerdata[7].title }}</div>
-                    <div class="tac home_pro2 font_18">{{ bannerdata[7].algorithm }}</div>
-                    <div class="tac home_pro3 font_18">
+                  <div class="extent_box font_f2">
+                    <div class="tac home_pro1 font_24">{{ bannerdata[7].title }}</div>
+                    <div class="tac home_pro2 font_16_col_2b">{{ bannerdata[7].algorithm }}</div>
+                    <div class="tac home_pro3 font_16_col_2b">
                       <span>{{ bannerdata[7].hashrate | filnum(bannerdata[7].hashrate) }}</span>|
                       <span>{{ bannerdata[7].power_watt | filnum(bannerdata[7].power_watt) }}</span> |
                       <span>{{ bannerdata[7].power_jth | filnum(bannerdata[7].power_jth) }}</span>
                     </div>
                     <div class="tac home_pro4 font_18 col_2 ab_20">
-                    </div> -->
+                    </div>
                   </div>
                 </router-link>
               </div>
@@ -220,11 +222,8 @@
                 <img src="https://www-static.bitmain.com/_nuxt/img/9ca12a3.jpg" alt=""
                   class="extent_box toscaleimg ab" />
                 <router-link :to="{ 'name': 'products', 'query': { 'id': '' } }">
-                  <div class="tac home_pro1 font_22 flex_b ">
-                    <div>More Products</div>
-                    <div>
-                      <a-icon type="right-circle" />
-                    </div>
+                  <div class="tac home_pro1 font_24 flex_a">
+                    More Products  
                   </div>
                 </router-link>
               </div>
@@ -242,11 +241,11 @@
     <div class="content">
       <div class="home_item_t">
         <span class="line"></span>
-        <span class="font_40">News & Events</span>
+        <span class="font_40 font_f1">News & Events</span>
         <span class="line"></span>
       </div>
       <div class="flex_b home_3_box" v-if="homenews.length <= 3">
-        <div class="box_flex home_news box_shadown iscursor" v-for="(item, index) in homenews" :key="index">
+        <div class="box_flex home_news box_shadown iscursor font_f1" v-for="(item, index) in homenews" :key="index">
           <router-link :to="{ 'name': 'news_detail', 'query': { 'id': item.id, 'choice_type': item.type } }">
             <div class="box_fleximg home_newsimg">
               <img :src="item.picture" alt="" class="toscaleimg" />
@@ -254,14 +253,14 @@
             <p></p>
             <p></p>
             <div class="box_flex_art">
-             <span class="color2"> {{ item.title }}</span>
+              <span class="color2 col_style1"> {{ item.title }}</span>
             </div>
             <p></p>
-            <div class="box_flex_art font_14" style="color:rgba(0,0,0,.6)">
+            <div class="box_flex_art font_12 col_style2">
               {{ item.create_time | timestampToTime(item.create_time) }}
             </div>
             <p></p>
-            <div class="box_flex_art font_12" style="color:rgba(0,0,0,.6)">
+            <div class="box_flex_art font_12 font_f4 col_style2 short_desc" style="line-height: 24px;">
               {{ toel2(item.short_desc, 100) }}
             </div>
           </router-link>
@@ -277,7 +276,7 @@
             <p></p>
             <p></p>
             <div class="box_flex_art">
-             <span class="color2"> {{ homenews[item].title }}</span>
+              <span class="color2"> {{ homenews[item].title }}</span>
             </div>
             <p></p>
             <div class="box_flex_art font_14" style="color:rgba(0,0,0,.6)">
@@ -296,15 +295,15 @@
     <div class="content home_3 home_8 home_item">
       <div class="home_item_t">
         <span class="line"></span>
-        <span class="font_40">Miners1688 Advantages</span>
+        <span class="font_36">Miners1688 Advantages</span>
         <span class="line"></span>
       </div>
       <div class="home_item_t_art">
         <!-- <span class="line2"></span> -->
-        <span class="font_18 color2">We provide perfect pre-sales and after-sales service.</span>
+        <span class="font_16  font_f4 color2">We provide perfect pre-sales and after-sales service.</span>
         <!-- <span class="line2"></span> -->
       </div>
-      <div class="home_item_t_art">
+      <div class="home_item_t_art font_f4" style="line-height:32px">
         Besides our own products (Miners1688), we also have various resources to collect other machines which is in
         the best condition.
       </div>
@@ -424,10 +423,10 @@ export default {
       let res = await this.$http.get(this.$api.getBanner)
       if (res.data.code == 200) {
         this.bannerdata = res.data.data
-        console.log(this.bannerdata ,'this.bannerdata ');
+        console.log(this.bannerdata, 'this.bannerdata ');
         this.bannertype = true
       } else {
-        this.$message.error(res.message)
+        this.$message.error(res.data.msg)
       }
     },
     async getNewsAndCasesList() {
@@ -445,7 +444,7 @@ export default {
         }
         console.log(this.homenews, 'this.homenews');
       } else {
-        this.$message.error(res.message)
+        this.$message.error(res.data.msg)
       }
     },
     async getProductsInfo(index) {
@@ -459,7 +458,7 @@ export default {
       if (res.code == 200) {
         this.productsInfo = res.data
       } else {
-        this.$message.error(res.message)
+        this.$message.error(res.data.msg)
       }
     },
     handleScroll() {
@@ -514,10 +513,18 @@ export default {
 }
 
 .home_1 {
-  background-color: #f4f6f9;
+  padding-top: 40px;
+  background-color: #F9F9F9;
   position: relative;
+  padding-bottom: 20PX;
 }
+.home_company{
+  flex:1;
+  height: 160px;
+}
+.home_company img{
 
+}
 .home1_img {
   position: absolute;
   left: 0;
@@ -541,7 +548,6 @@ export default {
   overflow: hidden;
 }
 
-
 .home_title {
   height: 63px;
   padding: 10px 0 10px 20px;
@@ -556,9 +562,11 @@ export default {
   height: 356px;
   word-break: break-all;
 }
-.home1_art_main{
+
+.home1_art_main {
   font-size: 24px;
 }
+
 .home1_art_t {
   font-size: 24px;
   color: #111;
@@ -715,9 +723,8 @@ export default {
   text-align: center;
   margin-bottom: 6px;
   font-weight: 400;
-  font-family: "Montserrat", Sans-serif;
   font-size: 16px;
-  color: #808285;
+  color: #999999;
 }
 
 .advantages_img img {
@@ -735,8 +742,9 @@ export default {
 }
 
 .advantages_art_c {
-  font-size: 15px;
-  color: #808285;
+  font-size: 16px;
+  color: #999999;
+  line-height: 24px;
 }
 
 .line {
@@ -778,12 +786,15 @@ export default {
 
 .home_pro1 {
   margin-top: 30px;
-  margin-bottom: 8px;
+  margin-bottom: 28px;
   color: #000;
+  
 }
-
+.tac_1{
+  text-align: center;
+}
 .home_pro2 {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: #000;
 }
 

@@ -40,7 +40,7 @@ export default {
             if (res.data.code == 200) {
                 this.caseinfo = res.data.data
             } else {
-                this.$message.error(res.message)
+                this.$message.error(res.data.msg)
             }
         }
     },

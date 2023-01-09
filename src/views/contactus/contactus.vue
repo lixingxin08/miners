@@ -9,7 +9,13 @@
                 <div class="entent_box flex_fs">
                     <div class="half contact_cl">
                         <div class="contact_cl_i flex_b">
-                            <a-input v-model="formdata.country_code" placeholder="+CountryCode" class="contact_inp"
+                            <a-input v-model="formdata.name" placeholder="Name" class="contact_inp"
+                                style="width:25%;margin-right: 20px;" />
+                            <a-input v-model="formdata.contact" placeholder="Whatapp/tele" class="contact_inp"
+                                style="flex:1;" />
+                        </div>
+                        <div class="contact_cl_i flex_b">
+                            <a-input v-model="formdata.country_code" placeholder="CountryCode" class="contact_inp"
                                 style="width:25%;margin-right: 20px;" />
                             <a-input v-model="formdata.phone" placeholder="Your Phone" class="contact_inp"
                                 style="flex:1;" />
@@ -84,6 +90,8 @@ export default {
         return {
             scrolltype: false,
             formdata: {
+                name: '',
+                contact: '',
                 country_code: '',
                 phone: '',
                 email: '',
@@ -100,6 +108,8 @@ export default {
             // this.bannerdata = res.data
             const formData = new FormData()
             let _that = this
+            formData.append('name', _that.formdata.name)
+            formData.append('contact', _that.formdata.contact)
             formData.append('country_code', _that.formdata.country_code)
             formData.append('phone', _that.formdata.phone)
             formData.append('email', _that.formdata.email)
@@ -107,11 +117,16 @@ export default {
             let res = await axios({
                 url: _that.$api.feedback,
                 method: 'post',
-                data:formData
-                
+                data: formData
+
             })
+            if (res.data.code == 10001) {
+                this.$message.success(res.data.msg)
+                return
+            }
             if (res.data.code == 200) {
-                this.$message.succes(res.data.msg)
+                
+                this.$message.success(res.data.msg)
             } else {
                 this.$message.error(res.data.msg)
             }
@@ -154,7 +169,7 @@ export default {
     font-weight: 700;
     padding-top: 90px;
     text-align: center;
-    background-color: #F4852A;
+    background-color: #555;
     color: #fff;
     padding-bottom: 70px;
 }
@@ -172,7 +187,7 @@ export default {
 }
 
 .contact_cl {
-    height: 416px;
+    height: 450px;
     padding: 20px;
     background-color: #fff;
 }
@@ -190,6 +205,7 @@ export default {
 .contact_inp {
     height: 48.5px;
     background-color: #FAFAFA;
+    border-radius: 14px;
 }
 
 .contact_cr_i {

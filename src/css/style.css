@@ -99,8 +99,21 @@
 .ant-menu-item{
   text-align: left!important;
 }
+.font_f1{
+  font-family: 'MiSans-Demibold';
+}
+.font_f2{
+  font-family: 'MiSans-Medium';
+}
+.font_f3{
+  font-family: 'MiSans-Light';
+}
+.font_f4{
+  font-family: 'MiSans-Regular';
+}
 .col_f{
   color: #fff;
+ 
 }
 .show{
  visibility: visible;
@@ -137,9 +150,9 @@ visibility: hidden;
   color: #000;
   cursor: pointer;
 }
-.ishover:hover {
+/* .ishover:hover {
   color: #ff4500;
-}
+} */
 .ishover2 {
   color: #ff4500;
   cursor: pointer;
@@ -172,6 +185,14 @@ visibility: hidden;
 .col_0{
   color: #000;
 }
+.col_style1{
+  color: #4361ff;
+}
+.col_style2{
+  color: #393939;
+}
+
+
 .iscursor{
   cursor: pointer;
 }

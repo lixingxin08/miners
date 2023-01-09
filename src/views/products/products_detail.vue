@@ -55,11 +55,15 @@
                 </div>
             </div>
             <div class="entent_box flex_fs font_22">
-                <div class="half" :class="type?'line_b':''" @click="changetype(true,1)" style="height:60px">Specifications</div>
-                <div class="half" :class="type?'':'line_b'" @click="changetype(false,2)"  style="height:60px">Purchasing Guidelines</div>
+                <div class="pro_detail_t" :class="type==1?'line_b':''" v-if="showtype" @click="changetype(1)" style="height:60px">Product Details</div>
+                <div class="pro_detail_t" :class="type==2?'line_b':''"  @click="changetype(2)"  style="height:60px">Specifications</div>
+                <div class="pro_detail_t" :class="type==3?'line_b':''" @click="changetype(3)"  style="height:60px">Purchasing Guidelines</div>
+            </div>
+            <div class="specifications" id="product" v-if="showtype">
+                <div v-html="detaildata.product_message" class="purchasing_art"></div>
             </div>
             <div class="specifications" id="specifications">
-                <div class="color1 specifications_title">Product Glance</div>
+                <div class="color2 specifications_title">Product Glance</div>
                 <p></p>
                 <div class="specifications_i flex_fs">
                     <div class="half_l">Version</div>
@@ -86,7 +90,7 @@
                     <div class="half_l">{{detaildata.power_jth}}</div>
                 </div>
                 <!--Detailed Characteristics-->
-                <div class="color1 specifications_title">Detailed Characteristics</div>
+                <div class="color2 specifications_title">Detailed Characteristics</div>
                 <p></p>
                 <p>Power Supply</p>
                 <p></p>
@@ -157,7 +161,10 @@ export default {
             detaildata: '',
             gallerylist: [],
             listid: 0,
-            type:true
+            type:1,
+            showtype:true,
+            showtype2:true,
+            showtype3:true,
         };
     },
     methods: {
@@ -171,8 +178,14 @@ export default {
             if(res.data.code==200){
                 this.detaildata=res.data.data[0]
                 this.gallerylist = this.detaildata.gallery.split('|')
+                if (this.detaildata.product_message==''||!this.detaildata.product_message) {
+                    this.showtype=false
+                    this.type=2
+                }else{
+                    this.showtype=true
+                }
             }else {
-              this.$message.error(res.message)
+              this.$message.error(res.data.msg)
             }
             
         },
@@ -183,13 +196,16 @@ export default {
             document.getElementById(id).scrollIntoView()
 
         },
-        changetype(type,id){
-            this.type=type
-            if (id==1) {
+        changetype(id){
+            this.type=id
+            if (id==2) {
                 document.getElementById('specifications').scrollIntoView(true)
             }
-            if (id==2) {
+            if (id==3) {
                 document.getElementById('purchasing').scrollIntoView(true)
+            }
+            if (id==1) {
+                document.getElementById('product').scrollIntoView(true)
             }
         }
     },
@@ -201,6 +217,11 @@ export default {
 };
 </script>
 <style scoped>
+.pro_detail_t{
+    flex:1;
+    text-align: center;
+    cursor: pointer;
+}
 .pro_del_t {
     width: 100%;
     height: 588px;
@@ -281,7 +302,7 @@ export default {
     margin-top: 40px;
     font-style: 18px;
     height: 30px;
-    border-left: 2px solid #ff4500;
+    border-left: 2px solid #4361ff;
     padding-left: 10px;
     font-weight: bold;
 }
@@ -289,7 +310,7 @@ export default {
     font-size: 16px;
 }
 .line_b{
-    border-bottom: 1px solid #ff4500;
-    color: #ff4500;
+    border-bottom: 1px solid #4361ff;
+    color: #4361ff;
 }
 </style>

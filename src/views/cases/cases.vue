@@ -45,7 +45,7 @@ export default {
             if(res.data.code==200){
                 this.caselist=res.data.data.cases
             }else {
-          this.$message.error(res.message)
+          this.$message.error(res.data.msg)
         }
         },
     },

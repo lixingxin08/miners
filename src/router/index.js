@@ -4,6 +4,7 @@ import Router from 'vue-router'
 const home = () => import('@/views/home/home')
 const login = () => import('@/views/login/login')
 const products = () => import('@/views/products/products')
+const immersion = () => import('@/views/immersion/immersion')
 const productsdetail = () => import('@/views/products/products_detail.vue')
 const aboutus = () => import('@/views/aboutuse/aboutuse')
 const news = () => import('@/views/news/news')
@@ -32,6 +33,11 @@ export default new Router({
       path: '/products',
       name: 'products',
       component: products
+    },
+    {
+      path: '/immersion',
+      name: 'immersion',
+      component: immersion
     },
     {
       path: '/productsdetail',

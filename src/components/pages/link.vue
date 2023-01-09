@@ -1,14 +1,23 @@
 <template>
   <div class="link">
+    <div class="link_top">
+      <div class="link_topimg" :class="opentype == 1?'link_topimg':'link_topimg2'">
+        <div  @mouseenter="changehover()" @mouseleave="leavehover()"> <img src="../../img/linklogo1.png" alt="" class="link_toplogo"></div>
+        <div class="link_top_msg flex_a" v-if="hovertype">
+          <img src="../../img/erweima.png" alt="">
+        </div>
+      </div>
+
+    </div>
     <div class="link_box">
       <div class="card" :class="
         opentype == 0
           ? ''
           : '' || opentype == 1
-          ? 'isclone'
-          : '' || opentype == 2
-          ? 'ishow'
-          : ''
+            ? 'isclone'
+            : '' || opentype == 2
+              ? 'ishow'
+              : ''
       ">
         <div class="card_t flex_b">
           <div>
@@ -24,11 +33,16 @@
             details,please leave a message here,we will reply you as soon as we
             can.
           </div>
+          <div class="fool_inp" style="display:flex; align-items: center; margin-bottom: 6px;margin-top: 10px">
+            <a-input placeholder="Name" v-model="formdata.name" style="margin-right:6px" />
+            <a-input placeholder="Whatapp/tele" v-model="formdata.contact" />
+          </div>
           <div class="flex_f" style="margin-bottom: 10px">
-            <a-input ref="userNameInput" v-model="formdata.country_code" placeholder="+" style="width:84px;margin-right: 6px">
+            <a-input ref="userNameInput" v-model="formdata.country_code" placeholder="+"
+              style="width:84px;margin-right: 6px">
               <a-icon slot="prefix" type="phone" theme="filled" style="color: #4361ff;" />
             </a-input>
-            <a-input style="flex:1;" v-model="formdata.phone"  />
+            <a-input style="flex:1;" v-model="formdata.phone" />
           </div>
           <div class="flex_f" style="margin-bottom: 10px;">
             <a-input ref="userNameInput" v-model="formdata.email" placeholder="Email">
@@ -37,8 +51,7 @@
           </div>
           <div class="flex_f" style="margin-bottom: 10px;">
             <template>
-              <a-textarea
-              v-model="formdata.description"
+              <a-textarea v-model="formdata.description"
                 placeholder="Enter product details (such as color,size,materials etc.) and other specific requirements to receive an accurate quote.*"
                 :rows="6">
               </a-textarea>
@@ -54,13 +67,14 @@
         opentype == 0
           ? ''
           : '' || opentype == 1
-          ? 'ishow'
-          : '' || opentype == 2
-          ? 'isclone'
-          : ''
-      " >
+            ? 'ishow'
+            : '' || opentype == 2
+              ? 'isclone'
+              : ''
+      ">
         <div>
-          <a-icon type="phone" @click="closelink()" />
+          <img src="../../img/linklogo2.png" alt=""  class="link_toplogo" @click="closelink()">
+        
         </div>
       </div>
     </div>
@@ -71,39 +85,49 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      opentype: 0,
+      opentype: 1,
+      hovertype: false,
       showtype: true,
-      formdata:{
-        country_code:'',
-        phone:'',
-        email:'',
-        description:''
+      formdata: {
+        name: '',
+        contact: '',
+        country_code: '',
+        phone: '',
+        email: '',
+        description: ''
       }
     };
   },
   methods: {
     async feedback() {
-            // let res = resdata
-            // this.bannerdata = res.data
-            const formData = new FormData()
-            let _that = this
-            formData.append('country_code', _that.formdata.country_code)
-            formData.append('phone', _that.formdata.phone)
-            formData.append('email', _that.formdata.email)
-            formData.append('description', _that.formdata.description)
-            let res = await axios({
-                url: _that.$api.feedback,
-                method: 'post',
-                data:formData
-                
-            })
-            if (res.data.code == 200) {
-                this.$message.succes(res.data.msg)
-            } else {
-                this.$message.error(res.data.msg)
+      // let res = resdata
+      // this.bannerdata = res.data
+      const formData = new FormData()
+      let _that = this
+      formData.append('name', _that.formdata.name)
+      formData.append('contact', _that.formdata.contact)
+      formData.append('country_code', _that.formdata.country_code)
+      formData.append('phone', _that.formdata.phone)
+      formData.append('email', _that.formdata.email)
+      formData.append('description', _that.formdata.description)
+      let res = await axios({
+        url: _that.$api.feedback,
+        method: 'post',
+        data: formData
+
+      })
+      if (res.data.code == 10001) {
+                this.$message.success(res.data.msg)
+                return
             }
-        },
-    setdata(){
+      if (res.data.code == 200) {
+        
+        this.$message.success(res.data.msg)
+      } else {
+        this.$message.error(res.data.msg)
+      }
+    },
+    setdata() {
       if (!this.$utils.verNum(this.formdata.country_code)) {
         this.$message.warning('Wrong format of Country Code')
         return
@@ -127,18 +151,61 @@ export default {
         this.opentype = 1;
       }
     },
+    changehover() {
+      this.hovertype = true
+    },
+    leavehover() {
+      this.hovertype = false
+    }
   },
 };
 </script>
 <style>
 .link {
   width: 300px;
-  height: 450px;
+  height: 550px;
   position: fixed;
   right: 5px;
   bottom: 5px;
-  overflow: hidden;
   z-index: 999;
+}
+
+.link_top {
+  position: relative;
+  left: 200px;
+}
+
+.link_topimg {
+  position: relative;
+  top: 150px;
+  z-index: 999;
+  left: -10px;
+}
+.link_topimg2{
+  position: relative;
+  top: 150px;
+  z-index: 0;
+  left: -10px;
+}
+.link_toplogo{
+  width: 50px;
+  height: 50px;
+}
+
+.link_top_msg {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: -160px;
+  top: -75px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+}
+
+.link_top_msg img {
+  width: 100px;
+  height: 100px;
 }
 
 .link_box {
@@ -172,12 +239,13 @@ export default {
 }
 
 .isclone {
-  animation: toclone 3s ease 0s 1;
+  animation: toclone 2s ease 0s 1;
   animation-fill-mode: forwards;
+
 }
 
 .ishow {
-  animation: toshow 3s ease 0s 1;
+  animation: toshow 2s ease 0s 1;
   animation-fill-mode: forwards;
 }
 
@@ -195,6 +263,7 @@ export default {
 .cardimg>div {
   cursor: pointer;
 }
+
 @keyframes toclone {
   0% {
     left: 0;

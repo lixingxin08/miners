@@ -67,7 +67,7 @@ export default {
             if (res.data.code == 200) {
                 this.newsdata = res.data.data.news
             } else {
-                this.$message.error(res.message)
+                this.$message.error(res.data.msg)
             }
         }
     },

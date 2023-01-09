@@ -1,12 +1,12 @@
 <template>
   <a-carousel arrows :dots="false" class="pro_carousel">
-    <div slot="prevArrow" slot-scope="props" class="custom-slick-arrow" style="left: 10px;zIndex: 1">
+    <div slot="prevArrow" slot-scope="props" class="custom-slick-arrow" style="left: 10px;zIndex: 1;transform: translateY(-50%);">
       <a-icon type="left-circle" />
     </div>
-    <div slot="nextArrow" slot-scope="props" class="custom-slick-arrow" style="right: 10px">
+    <div slot="nextArrow" slot-scope="props" class="custom-slick-arrow" style="right: 10px;transform: translateY(-50%);">
       <a-icon type="right-circle" />
     </div>
-    <div class="pro_item flex_f" v-for="(item, index) in product_item" :key="index">
+    <div class="pro_item flex_f font_f1" v-for="(item, index) in product_item" :key="index">
       <div v-for="(items, indexs) in item" :key="indexs" class="pro_itemchld">
         <div class="extent_box flex_a">
           <router-link :to="{'name':'products','query':{'id': productsList[indexs+index*6].id}}" class="homelink">
@@ -50,7 +50,7 @@ export default {
       }
     }
       }else {
-        this.$message.error(res.message)
+        this.$message.error(res.data.msg)
       }
     }
   }
@@ -76,7 +76,7 @@ export default {
 }
 
 .ant-carousel>>>.custom-slick-arrow:hover {
-  color: #ff4500;
+  color: #4361ff;
 }
 
 .ant-carousel>>>.slick-slide h3 {
@@ -104,7 +104,7 @@ export default {
 }
 .homelink{
   font-size: 16px;
-  color: gray;
+  color: #393939;
   font-weight: 600;
   text-align: center;
 }

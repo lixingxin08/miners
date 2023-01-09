@@ -51,7 +51,7 @@ export default {
       if (res.data.code == 200) {
         this.setCompanyInfo(res.data.data)
       } else {
-        this.$message.error(res.message)
+        this.$message.error(res.data.msg)
       }
     },
     scrollEvent() {
@@ -87,9 +87,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #393939;
   font-size: 12px;
-  width: 1920px;
+  /* width: 1920px; */
   overflow: scroll;
   box-sizing: border-box;
   font-family: 'MiSans-Normal';

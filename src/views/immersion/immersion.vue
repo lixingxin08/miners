@@ -69,12 +69,11 @@
 
                             </div>
                         </router-link>
-                        <div>
                         <div class="btn_box3" @click="changevisi(item)">
                            Get Best Price
                                 <!-- {{(index+1)+((pagination.current-1)*pagination.pageSize)}} -->
                            
-                        </div></div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,29 @@
+{
+    "code": 200,
+    "data": [{
+        "title": "Bitcoin Miner S19",
+        "algorithm": "SHA256",
+        "hashrate": "95T±3%",
+        "power_watt": "3250W±5%",
+        "power_jth": "34.5J/T±5%",
+        "gallery": "http://144.48.240.112:8080/ipfs/QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w?filename=QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w|http://144.48.240.112:8080/ipfs/QmUhSVoHhnLFZeAzFTj3cgAurzsSZMSNakmnwooezy6dMB?filename=QmUhSVoHhnLFZeAzFTj3cgAurzsSZMSNakmnwooezy6dMB|http://144.48.240.112:8080/ipfs/QmTKWoJCiKuUwmZRLwpRNLrdgx36dSy57712Jpo7MNt14B?filename=QmTKWoJCiKuUwmZRLwpRNLrdgx36dSy57712Jpo7MNt14B",
+        "cname": "BTC Miner Machine"
+    }, {
+        "title": "Bitcoin Miner",
+        "algorithm": "SHA256",
+        "hashrate": "95T±3%",
+        "power_watt": "3250W±5%",
+        "power_jth": "34.5J/T±5%",
+        "gallery": "http://144.48.240.112:8080/ipfs/QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w?filename=QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w|http://144.48.240.112:8080/ipfs/QmUhSVoHhnLFZeAzFTj3cgAurzsSZMSNakmnwooezy6dMB?filename=QmUhSVoHhnLFZeAzFTj3cgAurzsSZMSNakmnwooezy6dMB|http://144.48.240.112:8080/ipfs/QmTKWoJCiKuUwmZRLwpRNLrdgx36dSy57712Jpo7MNt14B?filename=QmTKWoJCiKuUwmZRLwpRNLrdgx36dSy57712Jpo7MNt14B",
+        "cname": "BTC Miner Machine"
+    }, {
+        "title": "ETH/ETC Miner E9",
+        "algorithm": "Ethash | ETH/ETC",
+        "hashrate": "2400M± 10%",
+        "power_watt": "1920W±10%",
+        "power_jth": "0.8J/M±10%",
+        "gallery": "http://144.48.240.112:8080/ipfs/QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w?filename=QmeG7UoNk12VFcShAzd8Nahpift8sRJ6aAE1xgQcpv3o9w|http://144.48.240.112:8080/ipfs/QmUhSVoHhnLFZeAzFTj3cgAurzsSZMSNakmnwooezy6dMB?filename=QmUhSVoHhnLFZeAzFTj3cgAurzsSZMSNakmnwooezy6dMB|http://144.48.240.112:8080/ipfs/Qmchn33QK8bEh6ZFLMWfAvAHp8xmJZemdzrZbCohsdAqrL?filename=Qmchn33QK8bEh6ZFLMWfAvAHp8xmJZemdzrZbCohsdAqrL",
+        "cname": "Ethereum Miner Machine"
+    }],
+    "message": "success"
+}
