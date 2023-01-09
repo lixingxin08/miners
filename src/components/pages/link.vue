@@ -1,8 +1,9 @@
 <template>
   <div class="link">
     <div class="link_top">
-      <div class="link_topimg" :class="opentype == 1?'link_topimg':'link_topimg2'">
-        <div  @mouseenter="changehover()" @mouseleave="leavehover()"> <img src="../../img/linklogo1.png" alt="" class="link_toplogo"></div>
+      <div class="link_topimg" :class="opentype == 1 ? 'link_topimg' : 'link_topimg2'">
+        <div @mouseenter="changehover()" @mouseleave="leavehover()"> <img src="../../img/linklogo1.png" alt=""
+            class="link_toplogo"></div>
         <div class="link_top_msg flex_a" v-if="hovertype">
           <img src="../../img/erweima.png" alt="">
         </div>
@@ -67,14 +68,14 @@
         opentype == 0
           ? ''
           : '' || opentype == 1
-            ? 'ishow'
+            ? 'ishow2'
             : '' || opentype == 2
-              ? 'isclone'
+              ? 'isclone2'
               : ''
       ">
         <div>
-          <img src="../../img/linklogo2.png" alt=""  class="link_toplogo" @click="closelink()">
-        
+          <img src="../../img/linklogo2.png" alt="" class="link_toplogo" @click="closelink()">
+
         </div>
       </div>
     </div>
@@ -117,11 +118,11 @@ export default {
 
       })
       if (res.data.code == 10001) {
-                this.$message.success(res.data.msg)
-                return
-            }
+        this.$message.success(res.data.msg)
+        return
+      }
       if (res.data.code == 200) {
-        
+
         this.$message.success(res.data.msg)
       } else {
         this.$message.error(res.data.msg)
@@ -162,11 +163,11 @@ export default {
 </script>
 <style>
 .link {
-  width: 300px;
-  height: 550px;
+  width: 10px;
+  height: 10px;
   position: fixed;
-  right: 5px;
-  bottom: 5px;
+  right: 300px;
+  bottom: 500px;
   z-index: 999;
 }
 
@@ -180,14 +181,18 @@ export default {
   top: 150px;
   z-index: 999;
   left: -10px;
+  cursor: pointer;
 }
-.link_topimg2{
+
+.link_topimg2 {
   position: relative;
   top: 150px;
   z-index: 0;
   left: -10px;
+  cursor: pointer;
 }
-.link_toplogo{
+
+.link_toplogo {
   width: 50px;
   height: 50px;
 }
@@ -248,16 +253,24 @@ export default {
   animation: toshow 2s ease 0s 1;
   animation-fill-mode: forwards;
 }
+.isclone2 {
+  animation: toclone2 2s ease 0s 1;
+  animation-fill-mode: forwards;
+
+}
+
+.ishow2 {
+  animation: toshow2 2s ease 0s 1;
+  animation-fill-mode: forwards;
+}
 
 .cardimg {
-  width: 300px;
-  height: 450px;
   position: absolute;
   font-size: 40px;
   color: #4361ff;
   padding-right: 60px;
-  left: 300px;
-  top: 450px;
+  left: 190px;
+    top: 200px;
 }
 
 .cardimg>div {
@@ -271,20 +284,43 @@ export default {
   }
 
   100% {
-    left: 300px;
+    left: 350px;
     top: 450px;
   }
 }
 
 @keyframes toshow {
   0% {
-    left: 300px;
+    left: 350px;
     top: 450px;
   }
 
   100% {
     left: 0;
     top: 0;
+  }
+}
+@keyframes toclone2 {
+  0% {
+    left: 190px;
+    top: 200px;
+  }
+
+  100% {
+    left: 350px;
+    top: 450px;
+  }
+}
+
+@keyframes toshow2 {
+  0% {
+    left: 350px;
+    top: 450px;
+  }
+
+  100% {
+    left: 190px;
+    top: 200px;
   }
 }
 </style>
